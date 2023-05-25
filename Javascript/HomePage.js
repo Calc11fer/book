@@ -8,7 +8,7 @@ let searchBg_open = document.getElementById("searchBg_open");
 
 
 function goHomePage() {
-    window.location.href = ".../index.html"
+    window.location.href = "../index.html"
 }
 
 function goProductPage() {
