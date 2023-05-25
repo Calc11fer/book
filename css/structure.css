@@ -2375,6 +2375,7 @@ footer div img {
     .checkout {
         width: 90vw;
         margin-right: 0vw;
+        margin-top: 4vw;
     }
     
     .checkout > div:nth-child(1) {
@@ -2392,12 +2393,11 @@ footer div img {
         margin-bottom: 1vw;
         display: none;
     }
-    
-    
-    /* .checkout > div:nth-child(1) > div img {
-        width: 80vw;
-        height: 8vw;
-    } */
+
+    .checkout > div:nth-child(1) > div img {
+        width: 29vw;
+        height: 7vw;
+    }
     
     .checkout > div:nth-child(1) p {
         font-size: calc(var(--_size)*1.1);
