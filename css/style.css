@@ -413,6 +413,10 @@
     border-bottom: 1px solid var(--tx--tertiary);
 }
 
+.checkout_navbarContainer div a {
+    text-decoration: underline 0.15vw;
+}
+
 .chekcout_form input, .chekcout_form select, .orderSummary_discountCode input {
     border-radius: calc(var(--bg--radius)*0.5);
     border: 1px solid var(--tx--quinary);

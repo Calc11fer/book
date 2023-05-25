@@ -309,7 +309,6 @@
 .navbar_links.checkout_1 {
   font-weight: 500;
   color: var(--tx--secondary);
-  text-decoration: underline 0.2vw;
 }
 
 .orderSummary {
