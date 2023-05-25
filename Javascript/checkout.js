@@ -42,7 +42,7 @@ if (cart_items.innerHTML < 1) {
 
 // Click the brand icon to go to the home page
 function goHomePage() {
-    window.location.href = "/Html/Homepage.html"
+    window.location.href = "../index.html"
 }
 
 function goProductPage() {

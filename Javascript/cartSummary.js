@@ -18,7 +18,7 @@ function goProductPage() {
 
 // Click the brand icon to go to the home page
 function goHomePage() {
-    window.location.href = "/Html/Homepage.html"
+    window.location.href = "../index.html"
 }
 
 
