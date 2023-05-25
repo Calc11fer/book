@@ -106,7 +106,7 @@ function goProductPage() {
 }
 
 function goHomePage() {
-    window.location.href = "/Html/Homepage.html"
+    window.location.href = "../index.html"
 }
 
 // warn the user when the input is empty
