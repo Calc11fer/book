@@ -8,11 +8,11 @@ let searchBg_open = document.getElementById("searchBg_open");
 
 
 function goHomePage() {
-    window.location.href = "/Html/Homepage.html"
+    window.location.href = ".../index.html"
 }
 
 function goProductPage() {
-    window.location.href = "/Html/product_page.html";
+    window.location.href = "Html/product_page.html";
 }
 
 
