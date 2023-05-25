@@ -1,0 +1,326 @@
+/* Home Page ======================================================================= */
+/* Top bar ------------------------------------- */
+.topBar {
+  background-color: white;
+}
+
+.topBar_dropdown li a {
+  color: var(--tx--secondary);
+}
+
+.topBar_dropdown li ul {
+  background-color: white;
+}
+
+.dropdown_list ion-icon {
+  fill: var(--tx--secondary);
+}
+
+.dropdown_list:hover, .dropdown_list_2:hover{
+  background-color: var(--background--tertiary);
+}
+
+.topBar_dropdown li ul li a:hover {
+  background-color: var(--background--tertiary);
+}
+
+.searchBar {
+  background-color: var(--background--tertiary);
+}
+
+.searchBar button ion-icon {
+  color: white;
+}
+
+.searchBar input::placeholder {
+  color: var(--tx--quinary)
+}
+
+.searchBar button {
+  background-color: var(--bt--primary);
+}
+
+.searchBar button:hover {
+  background-color: var(--bt--primary--hover);
+}
+
+#cart_items {
+  background-color: var(--clickable);
+  color:white;
+}
+
+
+
+/* Heading ------------------------------------- */
+.heading_fg {
+  background-color: var(--background--heading);
+}
+
+.heading_fg div a:nth-child(2) {
+  color: var(--tx--secondary);
+}
+
+.heading_fg div a:nth-child(3) {
+  color: var(--clickable);
+}
+
+.heading_fg div a:nth-child(1) {
+  color: var(--tx--primary);
+}
+
+#heading_scrollLeft, #heading_scrollRight {
+  color: #0439A8;
+}
+
+
+
+/* Recommendation ------------------------------------- */
+.bookList_topbar {
+  background-color: var(--background--tertiary);
+}
+
+.bookList_topbar__text {
+  color: var(--tx--secondary);
+}
+
+.bookList_background {
+  background-color: var(--background--tertiary);
+}
+
+.product_container:hover .bookList_background {
+  background-color: var(--background--secondary);
+}
+
+.bookList_bookInfo p:hover {
+  color: var(--clickable);
+}
+
+.bookList_title {
+  color: var(--tx--secondary);
+}
+
+.bookList_author {
+  color: var(--tx--tertiary);
+}
+
+.bookList_price {
+  color: var(--tx--secondary);
+}
+
+
+
+/* Subscribe ------------------------------------- */
+.subscribe_container {
+  background-color: var(--background--primary);
+}
+
+.subscribe_info > h2, .subscribe_info > div > label{
+  color: white;
+}
+
+.subscribe_info > h2 > span {
+  color: var(--clickable);
+}
+
+.subscribe_info button {
+  background-color: white;
+}
+
+
+
+/* Business information ------------------------------------- */
+.business_container {
+  background-color: var(--background--secondary);
+}
+
+.business_container ul li a {
+  color: var(--tx--primary);
+}
+
+.business_container ul a:hover {
+  color: var(--clickable);
+}
+
+
+
+/* footer ----------------------------------------------------- */
+
+
+/* side cart ------------------------------------------------- */
+
+.sideCart_itemInfo div p:nth-child(1), .sideCart_itemInfo div + p, .sideCart_quantityContainer, .sideCart_removeBt, 
+.subtotalPrice_container > div:nth-child(1) > p:nth-child(1), .sideCart_quantityContainer ion-icon,
+.sideCart_title p, #cart_close {
+  color: var(--tx--secondary)
+}
+
+.sideCart_itemInfo div p:nth-child(2), 
+.subtotalPrice_container > div:nth-child(1) > p:nth-child(2), 
+.subtotalPrice_container > div:nth-child(2) > p:nth-child(2),
+.subtotalPrice_container > div:nth-child(1) > p:nth-child(2) span  {
+  color: var(--tx--tertiary);
+}
+
+.subtotalPrice_container > div:nth-child(2) > p:nth-child(1) span, 
+.subtotalPrice_container > div:nth-child(2) > p:nth-child(1) {
+  color: var(--important);
+}
+
+.sideCart_viewCart {
+  color: var(--bt--secondary);
+  border: 2px solid var(--bt--secondary);
+  border-radius: var(--bt--radius);
+}
+
+.sideCart_checkout {
+  color: white;
+  background-color: var(--bt--primary);
+  border-radius: var(--bt--radius);
+}
+
+.sideCart_removeBt:hover {
+  color: var(--clickable);
+}
+
+.sideCart_quantityContainer ion-icon:hover {
+  color: var(--clickable);
+}
+
+
+
+/* Search result Page ============================================================*/
+.searched_container > div > div:nth-child(2) button {
+  background-color: var(--background--tertiary);
+}
+
+.searched_container {
+  background-color: var(--background--secondary);
+}
+
+#searched_input{
+  background-color: white;
+}
+
+.searched_container > div > div:nth-child(2) p,
+.searched_container > div > div:nth-child(2) button,
+.searched_container > div > div:nth-child(1) input {
+  color: var(--tx--secondary)
+}
+
+.clickable_text {
+  color: var(--clickable);
+}
+
+
+
+
+/* Product Page ======================================================================= */
+
+.product1_container {
+  background-color: var(--background--tertiary);
+}
+
+.product_viewCart {
+  color: var(--bt--secondary);
+  background-color: white;
+}
+
+.product_viewCart:hover {
+  box-shadow: var(--bg--shadow--hover);
+  transform: translateY(-2px);
+}
+
+.productInfo div div p:nth-child(1), .productInfo div div p:nth-child(3), 
+.productInfo > div:nth-child(2) p:nth-child(1)  {
+  color: var(--tx--primary);
+}
+
+.productInfo > div:nth-child(2) p:nth-child(2), 
+.productInfo > div:nth-child(2) p:nth-child(4) a  {
+  color: var(--tx--secondary);
+}
+
+.productInfo > div:nth-child(2) p:nth-child(4) a:hover {
+  color: var(--clickable);
+}
+
+.productInfo div div p:nth-child(2),
+.productInfo > div:nth-child(2) p:nth-child(3) {
+  color: var(--tx--tertiary);
+}
+
+
+/* Cart summary Page ======================================================================= */
+
+
+.cartSummary_check {
+  background-color: var(--bt--primary);
+  color: white;
+}
+
+.cartSummary_shop {
+  background-color: white;
+  color: var(--bt--secondary);
+}
+
+.checkout_priceInfo > div:nth-child(1) > p:nth-child(1), .summary_info >div:nth-child(2) p:nth-child(1), 
+.cartSummary_heading {
+  color: var(--tx--secondary);
+}
+
+.checkout_priceInfo > div:nth-child(2) > p, .summary_info >div:nth-child(2) p:nth-child(2) {
+  color: var(--tx--tertiary);
+}
+
+.checkout_priceInfo > div:nth-child(1) > p:nth-child(2) {
+ color: var(--important);
+}
+
+.cartSummary_check:hover {
+  background-color: var(--bt--primary--hover);
+}
+
+.cartSummary_shop:hover {
+  background-color: rgb(241, 241, 241);
+}
+/* Checkout Page ======================================================================= */
+
+.checkout_navbarContainer h2, .orderSummary_priceInfo div:nth-child(3) p:nth-child(1), 
+.orderSummary_priceInfo div:nth-child(3) span {
+  color: var(--tx--secondary);
+}
+
+.orderSummary_priceInfo div:nth-child(3) p:nth-child(2) {
+  color: var(--important);
+}
+
+.chekcout_form > div p:nth-child(2) a{
+  color: var(--clickable);
+}
+
+.navbar_links, .orderSummary_priceInfo div:nth-last-child(n+2) p, .orderSummary_priceInfo > p {
+  color: var(--tx--tertiary);
+}
+
+.navbar_links.checkout_cart {
+  color: var(--clickable);
+}
+
+.navbar_links.checkout_1 {
+  font-weight: 500;
+  color: var(--tx--secondary);
+  text-decoration: underline 0.2vw;
+}
+
+.orderSummary {
+  background-color: var(--background--secondary);
+}
+
+.orderSummary_discountCode button {
+  background-color: var(--bt--primary);
+  color: white;
+}
+
+.orderSummary_discountCode button:hover {
+  background-color: var(--bt--primary--hover);
+}
