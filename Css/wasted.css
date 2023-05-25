@@ -1,0 +1,82 @@
+:root {
+    /* Basic*/
+    --_size: 15px;
+    --transitionspeed: 0.4s;
+    --marginLine: 60px;
+    --img--brightness--hover: brightness(120%);
+  
+    /* sizes */
+    --bt--size: 50px;
+    --bts--margin: 20px;
+  
+    --topBar--bts: 110px;
+    --topBar--margin: 20px;
+    --topBar--height: 70px;
+  
+    --heart--padding: 7px;
+    --cart--padding: 7px;
+    --profile--padding: 10.5px;
+    --brandIcon--width: 91px;
+  
+    --img--width: 110px;
+    --img--height: 180px;
+  
+    /* border-radius */
+    --bt--radius: 15px;
+    --bg--radius: 12px;
+  
+    /* text font */
+    --font--primary: 'Josefin Sans', sans-serif;
+    --font--secondary: 'Poppins', sans-serif;
+    --font--tertiary: 'Futura', sans-serif;
+    --font--quartus: Arial, sans-serif;
+  
+    /* buttons/icons color */
+    --bt--primary: #3B7FD9;
+    --bt--primary--hover: #3674c6;
+    --bt--secondary: #0460FB;
+    --bt--tertiary: #F4F5F7;
+    
+    /* text color */
+    --tx--primary: black;
+    --tx--secondary: #2F2F2F;
+    --tx--tertiary: #4A4A4A;
+    --tx--quartus: #767676;
+    --tx--quinary: #ACACAC;
+    --clickable: #FF5900;
+    --important: #E70011;
+    --success: #009E3B;
+  
+    /* Background color */
+    --background--primary: #2F2F2F;
+    --background--secondary:#EDF2F8;
+    --background--tertiary: #F4F5F7;
+    --background--quartus: #EBEBEB;
+    --background--heading: #F8ECC7;
+  
+    /* shadow */
+    --img--shadow: 2px 3px 0.2em rgb(105, 105, 105);
+    --tx--shadow: 2px 2px 0.2em #171717;
+    --bg--shadow--hover: 0px 1px 0.5em rgba(0, 0, 88, 0.2);
+    --bt--shadow--hover: 1px 2px 0.1em rgba(0, 0, 0, 0.200);
+}
+  
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+
+#cart_close {
+    --ionicon-stroke-width: 48px;
+    height: 48px;
+    width: 48px;
+}

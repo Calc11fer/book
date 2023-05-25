@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+
+    <link rel="stylesheet" href="/Css/root.css">
+    <link rel="stylesheet" href="/Css/color.css">
+    <link rel="stylesheet" href="/Css/style.css">
+    <link rel="stylesheet" href="/Css/structure.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+        <!-- Top bar -->
+        <div class="topBar">
+            <div class="topBar_container">
+                <img id="brand_icon" src="/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
+                <ul class="topBar_dropdown">
+                    <li class="dropdown_list"><a class="dropdown_bt phone_remove"><span>RECOMMENDATION</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                        <ul class="dropdownList_container">
+                            <li><a href="">Popular Now</a></li>
+                            <li><a href="">Best Selling</a></li>
+                            <li><a href="">New Release</a></li>
+                            <li><a href="">Promotions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_list"><a class="dropdown_bt"><span>BOOKS</span>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </a>
+                        <ul class="dropdownList_container">
+                                <ul>
+                                    <li><a href="#">Art & Photography</a></li>
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Architecture & Landscape</a></li>
+                                    <li><a href="#">Music</a></li>
+                                    <li><a href="#">Food & Drink</a></li>
+                                    <li><a href="#">Society & Culture</a></li>
+                                    <li><a href="#">Politics & Law</a></li>
+                                    <li><a href="#">Romance</a></li>
+                                </ul>
+                            <li class="computer_remove"><a href="#">Popular Now</a></li>
+                            <li class="computer_remove"><a href="#">Best Selling</a></li>
+                            <li class="computer_remove"><a href="#">New Release</a></li>
+                            <li class="computer_remove"><a href="#">Promotions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown_list_2"><a class="dropdown_bt" href="#"><span>ABOUT US</span></a></li>
+                </ul>
+            </div>
+            <div class="topBar_container">
+                <form class="searchBar phone_remove" action="/Html/search_results.html" method="get">
+                    <input id="search_input" type="text" placeholder="Search..." name="search">
+                    <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
+                </form>
+                <div>
+                    <div id="cart_icon_container">
+                        <img id="cart_icon" src="/icons/cart_icon.png"><div id="cart_items">0</div>
+                    </div>
+                </div>
+                <div>
+                    <img id="user_icon" src="/icons/user_icon.png">
+                </div> 
+                <div class="searchBt_phone" onclick="openSearch()">
+                    <ion-icon name="search-outline"></ion-icon></button>
+                </div>  
+            </div>
+            
+                <!-- side cart -->
+            <div class="sideCart" id="sideCart-open">
+    
+                <div class="sideCart_title">
+                    <p>YOUR CART - <span id="title_itemTotal">0</span> items total</p>
+                    <ion-icon id="cart_close" name="close-outline"></ion-icon>
+                </div>
+                
+                <div class="sideCart_items_container" id="sideCart_addItems">
+                    <div class="sideCart_items" id="item_1">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_1.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>The Seep</p>
+                                    <p>Chana Porter</p>
+                                </div>
+                                <p>$49.95</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_1" >remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_2">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_2.jpg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>Prosper's Demon</p>
+                                    <p>K.I. Parker</p>
+                                </div>
+                                <p>$69.90</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_2">remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_3">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_3.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>The Book of Art</p>
+                                    <p>Regina Phalange</p>
+                                </div>
+                                <p>$55.00</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_3">remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_4">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_4.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>Empty Hearts</p>
+                                    <p>Juli Zeh</p>
+                                </div>
+                                <p>$79.95</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_4">remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_5">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_5.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>Booth</p>
+                                    <p>Karen Joy Fowler</p>
+                                </div>
+                                <p>$39.95</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_5">remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_6">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_6.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>Follow Me to Ground</p>
+                                    <p>Sue Rainsord</p>
+                                </div>
+                                <p>$89.95</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_6">remove</a>
+                        </div>
+                    </div>
+                    <div class="sideCart_items" id="item_7">
+                        <div>
+                            <div><img src="/Books_cover_copy/covers/cover_11.jpeg"></div>
+                            <div class="sideCart_itemInfo">
+                                <div>
+                                    <p>Sin Eater</p>
+                                    <p>Megan Campisi</p>
+                                </div>
+                                <p>$49.99</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="sideCart_quantityContainer">Qty:
+                                <span>
+                                    <ion-icon name="remove"></ion-icon>
+                                    <span>1</span>
+                                    <ion-icon name="add"></ion-icon>
+                                </span>
+                            </p>
+                            <a class="sideCart_removeBt" id="remove_7">remove</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="orderNote_container">
+                    <label for="orderNote">Add a note to your order:</label>
+                    <input id="orderNote" type="text">
+                </div>
+    
+                <div class="subtotalPrice_container">
+                    <div>
+                        <p>Subtotal:</p>
+                        <p><span id="subtotalPrice_itemTotal">0</span> items total</p>
+                    </div>
+                    <div>
+                        <p>$<span id="subtotalPrice">0.00</span></p>
+                        <p>tax included adn shipping calculated at checkout</p>
+                    </div>
+                </div>
+    
+                <div class="sideCart_bts">
+                    <a href="/Html/cart_summary.html" class="sideCart_viewCart">View Cart</a>
+                    <a href="/Html/checkout.html" class="sideCart_checkout">Check Out</a>
+                </div>
+    
+                <div class="sideCart_footer">
+                    <img src="/icons/AMEX_Icon.png" alt="American express">
+                    <img src="/icons/VISA_icon.png" alt="Visa">
+                    <img src="/icons/Mastercard_icon.png" alt="Mastercard">
+                    <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
+                    <img src="/icons/Apple_icon.png" alt="Apple pay">
+                </div>
+    
+            </div>
+        </div>
+
+        <!--search result in phone version,  appear after the user click search button-->
+        <div class="searchBar_drop_shadow" id="searchBg_open">
+        </div>
+        <div class="searchBar_container computer_remove" id="searchBar_open">
+            <form class="searchBar_phone" action="/Html/search_results.html" method="get">
+                <input id="search_input" type="text" placeholder="Search..." name="search">
+                <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
+            </form>
+        </div>
+
+        <!-- Search result -->
+        <div class="searched_container">
+            <div>
+                <div>
+                    <input id="searched_input" type="search" placeholder="Search...">
+                </div>
+                <div>
+                    <p>2113 RESULTS FOR "<span id="searched_input_small">Art</span>"</p>
+                    <button>SORT<ion-icon name="chevron-down-outline"></ion-icon></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="recommendation searchResult_1 phone_remove">
+            <div class="bookList_scrollContainer">
+                <div class="bookList searchResult_container">
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">The Seep</p>
+                                <p class="bookList_author">Chana Porter</p>
+                                <p class="bookList_price">$49.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_1_heart"src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_1_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Prosper's Demon</p>
+                                <p class="bookList_author">K.I. Parker</p>
+                                <p class="bookList_price">$69.90</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_2_heart" src="/icons/heart_bt.png" onclick="goProductPage()">
+                                <img class="bookList_productBts" id="product_2_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">The Book of Art</p>
+                                <p class="bookList_author">Regina Phalange</p>
+                                <p class="bookList_price">$55.00</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_3_heart" src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_3_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Empty Hearts</p>
+                                <p class="bookList_author">Juli Zeh</p>
+                                <p class="bookList_price">$79.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_4_heart" src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_4_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Booth</p>
+                                <p class="bookList_author">Karen Joy Fowler</p>
+                                <p class="bookList_price">$39.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_5_heart" src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_5_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="recommendation searchResult phone_remove">
+            <div class="bookList_scrollContainer">
+                <div class="bookList searchResult_container">
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Follow Me to Ground</p>
+                                <p class="bookList_author">Sue Rainsord</p>
+                                <p class="bookList_price">$89.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_6_heart" src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_6_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_11.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Sin Eater</p>
+                                <p class="bookList_author">Megan Campisi</p>
+                                <p class="bookList_price">$49.99</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" id="product_7_heart"src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_7_cart" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">The Book of Art</p>
+                                <p class="bookList_author">Regina Phalange</p>
+                                <p class="bookList_price">$55.00</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Empty Hearts</p>
+                                <p class="bookList_author">Juli Zeh</p>
+                                <p class="bookList_price">$79.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Booth</p>
+                                <p class="bookList_author">Karen Joy Fowler</p>
+                                <p class="bookList_price">$39.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="recommendation searchResult phone_remove">
+            <div class="bookList_scrollContainer">
+                <div class="bookList searchResult_container">
+
+                    
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">The Seep</p>
+                                <p class="bookList_author">Chana Porter</p>
+                                <p class="bookList_price">$49.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts" src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Prosper's Demon</p>
+                                <p class="bookList_author">K.I. Parker</p>
+                                <p class="bookList_price">$69.90</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts" src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">The Book of Art</p>
+                                <p class="bookList_author">Regina Phalange</p>
+                                <p class="bookList_price">$55.00</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Empty Hearts</p>
+                                <p class="bookList_author">Juli Zeh</p>
+                                <p class="bookList_price">$79.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product_container">
+                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover">
+                        <div class="bookList_background">
+                            <div class="bookList_bookInfo">
+                                <p class="bookList_title">Booth</p>
+                                <p class="bookList_author">Karen Joy Fowler</p>
+                                <p class="bookList_price">$39.95</p>
+                            </div>
+                            <div class="bookList_bts__container">
+                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product_container_phone computer_remove">
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">The Seep</p>
+                        <p class="bookList_author_phone">Chana Porter</p>
+                        <p class="bookList_price_phone">$49.95</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_1_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_1_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">Prosper's Demon</p>
+                        <p class="bookList_author_phone">K.I. Parker</p>
+                        <p class="bookList_price_phone">$69.90</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_2_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_2_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">The Book of Art</p>
+                        <p class="bookList_author_phone">Regina Phalange</p>
+                        <p class="bookList_price_phone">$55.00</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_3_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_3_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">Empty Hearts</p>
+                        <p class="bookList_author_phone">Juli Zeh</p>
+                        <p class="bookList_price_phone">$79.95</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_4_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_4_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">Booth</p>
+                        <p class="bookList_author_phone">Karen Joy Fowler</p>
+                        <p class="bookList_price_phone">$39.95</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_5_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_5_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+            <div class="bookList_background_phone">
+                <div>
+                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
+                    <div class="bookList_bookInfo_phone">
+                        <p class="bookList_title_phone">Follow Me to Ground</p>
+                        <p class="bookList_author_phone">Sue Rainsord</p>
+                        <p class="bookList_price_phone">$89.95</p>
+                    </div>
+                </div>
+                <div class="bookList_bts_container_phone">
+                    <img class="bookList_productBts searchBtns" id="product_6_heart"src="/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_6_cart_phone" src="/icons/cart_bt.png">
+                </div>
+            </div>
+
+        </div>
+
+        <p class="clickable_text">LOAD MORE</p>
+
+        <!-- subscribe -->
+        <div class="subscribe_outsideContainer adjustMargin">
+            <div class="subscribe_container">
+                <div class="subscribe_info">
+                    <h2>Get <span>tailored recommendations</span> with our <span>newsletter</span> !</h2>
+                    <div>
+                        <label for="subscribe_email">Your Email:</label>
+                        <input id="subscribe_email" type="email" name="email">
+                        <button type="submit">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe_imgs">
+                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_1.jpeg">
+                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_3.jpeg">
+                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_9.jpeg">
+            </div> 
+        </div>
+
+        <!-- Business infomation -->
+        <div class="business_container">
+            <div>
+                <h2>Books At Manic</h2>
+                <h3>Shipping Australia</h3>
+                <p>
+                    Australian orders over $25 are free of postage charges. Orders under $25 attract a $5 shipping fee. 
+                    Orders usually ship within 1-5 business days. International orders are $20 for the first item and 
+                    $10 for each subsequent item. Please note that due to the COVID-19 pandemic international shipping 
+                    charges may exceed what was originally quoted.
+                </p>
+            </div>
+            <ul>
+                <li><a href="">Privacy policy</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="">Do not sell my personal information</a></li>
+            </ul>
+            <div class="socialApps">
+                <img src="/icons/Instagram.png">
+                <img src="/icons/Email.png">
+            </div>
+        </div> 
+
+        <!-- footer -->
+        <footer>
+            <p>© 2023, Books at Manic.</p>
+            <div>
+                <img src="/icons/AMEX_Icon.png" alt="American express">
+                <img src="/icons/VISA_icon.png" alt="Visa">
+                <img src="/icons/Mastercard_icon.png" alt="Mastercard">
+                <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
+                <img src="/icons/Apple_icon.png" alt="Apple pay">
+            </div>
+
+        </footer>
+</body>
+
+<script src="/Javascript/search_results.js"></script>
+</html>
