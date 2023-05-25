@@ -12,7 +12,7 @@ function goHomePage() {
 }
 
 function goProductPage() {
-    window.location.href = "/Html/product_page.html";
+    window.location.href = "Html/product_page.html";
 }
 
 
