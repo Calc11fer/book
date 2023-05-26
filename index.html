@@ -7,10 +7,10 @@
     <title>Books At Manic</title>
 
 
-    <link rel="stylesheet"  href="css/root.css">
-    <link rel="stylesheet" href="css/color.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet"  href="/book/css/root.css">
+    <link rel="stylesheet" href="/book/css/color.css">
+    <link rel="stylesheet" href="/book/css/style.css">
+    <link rel="stylesheet" href="/book/css/structure.css">
 
     <!-- Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
     <!-- Top bar -->
     <div class="topBar">
         <div class="topBar_container">
-            <img id="brand_icon" src="icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
+            <img id="brand_icon" src="/book/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
             <ul class="topBar_dropdown">
                 <li class="dropdown_list"><a class="dropdown_bt phone_remove"><span>RECOMMENDATION</span>
                     <ion-icon name="chevron-down-outline"></ion-icon>
@@ -62,17 +62,17 @@
             </ul>
         </div>
         <div class="topBar_container">
-            <form class="searchBar phone_remove" action="Html/search_results.html" method="get">
+            <form class="searchBar phone_remove" action="/book/Html/search_results.html" method="get">
                 <input id="search_input" type="search" placeholder="Search..." name="search">
                 <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
             </form>
             <div>
                 <div id="cart_icon_container">
-                    <img id="cart_icon" src="icons/cart_icon.png"><div id="cart_items">0</div>
+                    <img id="cart_icon" src="/book/icons/cart_icon.png"><div id="cart_items">0</div>
                 </div>
             </div>
             <div>
-                <img id="user_icon" src="icons/user_icon.png">
+                <img id="user_icon" src="/book/icons/user_icon.png">
             </div> 
             <div class="searchBt_phone" onclick="openSearch()">
                 <ion-icon name="search-outline"></ion-icon></button>
