@@ -311,12 +311,12 @@
   color: var(--clickable);
 }
 
-.navbar_links.checkout_1 {
+.navbar_links.checkout_1{
   font-weight: 500;
   color: var(--tx--secondary);
 }
 
-.orderSummary {
+.orderSummary, .shipMethod_checked:nth-of-type(1), .payment_creditCard > div:nth-child(1) {
   background-color: var(--background--secondary);
 }
 
@@ -330,6 +330,9 @@
 }
 
 
+.payment_creditCard > div:nth-child(2) {
+  background-color: var(--background--tertiary);
+}
 
 
 

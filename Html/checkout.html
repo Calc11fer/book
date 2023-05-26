@@ -206,11 +206,11 @@
     <div class="checkout_navbarContainer">
         <h2>CHECK OUT</h2>
         <div>
-            <a class="navbar_links checkout_cart">Cart</a> 
+            <a href="/Html/cart_summary.html" class="navbar_links checkout_cart">Cart</a> 
             <ion-icon name="chevron-forward-outline"></ion-icon>
-            <a class="navbar_links checkout_1">information</a>
+            <a class="navbar_links checkout_1" >information</a>
             <ion-icon name="chevron-forward-outline"></ion-icon>
-            <a class="navbar_links">Shipping</a>
+            <a class="navbar_links" >Shipping</a>
             <ion-icon name="chevron-forward-outline"></ion-icon>
             <a class="navbar_links">Payment</a>
         </div>
@@ -331,14 +331,14 @@
                         <p>Contact</p>
                         <p id="user_email">ucasl62@gmail.com</p>
                     </div>
-                    <a>Change</a>
+                    <a onclick="returnToInfo()">Change</a>
                 </div>
                 <div>
                     <div>
                         <p>Ship to</p>
                         <p id="user_address">207 - 211 Carltaon csasda varit 3053 Audstarlia</p>
                     </div>
-                    <a>Change</a>
+                    <a onclick="returnToInfo()">Change</a>
                 </div>
                 <div class="paymentPage">
                     <div>
@@ -346,7 +346,7 @@
                         <p id="shipping_standard">Standard - <span>FREE</span></p>
                         <p id="shipping_express">Express - <span>$15</span></p>
                     </div>
-                    <a>Change</a>
+                    <a onclick="returnToShip()">Change</a>
                 </div>
             </div>
 
@@ -371,7 +371,7 @@
                     </div>
 
                     <div class="nextStep">
-                        <a><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
+                        <a onclick="returnToInfo()"><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
                         <input type="submit" value="Continue to payment">
                     </div>
                 </form>
@@ -442,7 +442,7 @@
                 </div>
 
                 <div class="nextStep">
-                    <a><ion-icon name="chevron-back-outline"></ion-icon>Return to shipping</a>
+                    <a onclick="returnToShip()"><ion-icon name="chevron-back-outline"></ion-icon>Return to shipping</a>
                     <input type="submit" value="Proceed payment">
                 </div>
             </form>

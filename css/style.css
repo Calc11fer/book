@@ -69,9 +69,9 @@
     font-weight: normal;
 }
 
- img, .searchBar button {
+ img, input[type="radio"], input[type="checkbox"], a, button{
     cursor: pointer;
- }
+}
 
 
 /* main top navigation bar */
@@ -426,7 +426,6 @@
     border: 1px solid var(--tx--quinary);
 }
 
-
 .chekcout_form > div p:nth-child(2) a {
     text-decoration: underline 0.2vw;
 }
@@ -442,13 +441,11 @@
 .orderSummary_discountCode button {
     border-radius: calc(var(--bg--radius)*0.5);
     border: none;
-    cursor: pointer;
 }
 
 .sideCart_items_container.order::-webkit-scrollbar {
     overflow: visible;
 }
-
 
 /* For "checkout shipping method" under Check out page */
 
@@ -462,5 +459,50 @@
 
 .shipping_info div a {
     text-decoration: underline 0.1vw;
-    cursor: pointer;
+}
+
+
+/* For "checkout shipping method" under checkout page */
+.shipping_info {
+    border: 1px solid var(--tx--quinary);
+    border-radius: calc(var(--bg--radius));
+}
+
+.shipMethod_checked:nth-of-type(1) {
+    border: 1px solid var(--bt--secondary);
+    border-radius: var(--bg--radius) var(--bg--radius) 0 0;
+}
+
+.shipMethod_checked:nth-of-type(2) {
+    border: 1px solid var(--tx--quinary);
+    border-radius: 0 0 var(--bg--radius) var(--bg--radius);
+}
+
+#payment > div:nth-of-type(2) {
+    border: 1px solid var(--tx--quinary);
+    border-radius: var(--bg--radius);
+}
+
+.payment_creditCard > div:nth-child(1) {
+    border: 1px solid var(--bt--secondary);
+    border-radius: var(--bg--radius) var(--bg--radius) 0 0;
+}
+
+.payment_creditCard > div:nth-child(2) {
+    border-left: 1px solid var(--bt--secondary);
+    border-right: 1px solid var(--bt--secondary);
+    border-bottom: 1px solid var(--bt--secondary);
+}
+
+.payment_creditCard > div:nth-child(2) div input {
+    border-radius: calc(var(--_size)*0.5);
+    border: 1px solid var(--tx--quinary);
+}
+
+.payment_paypal, .payment_pOrder{
+    border: 1px solid var(--tx--quinary);
+}
+
+.payment_pOrder {
+    border-radius: 0 0 var(--bg--radius) var(--bg--radius);
 }
