@@ -107,3 +107,27 @@ window.addEventListener("load", () => {
     }
 })
 
+
+// let shipMethod = document.querySelector('input[name="shipMethod"]:checked').value;
+// console.log(shipMethod);
+
+
+const form = document.getElementById("form");
+const email = document.getElementById("email");
+const country = document.getElementById("country");
+const lastName = document.getElementById("lastName");
+const address = document.getElementById("address");
+const city = document.getElementById("city");
+const state = document.getElementById("state");
+const postcode = document.getElementById("postcode");
+
+form.addEventListener("submit", function(e) {
+    const emailNew = email.value;
+    const countryNew = country.value;
+    const lastNameNew = lastName.value;
+    const addressNew = address.value;
+    const cityNew = city.value;
+    const stateNew = state.value;
+    const postcodeNew = postcode.value;
+    
+})

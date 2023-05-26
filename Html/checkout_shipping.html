@@ -216,108 +216,38 @@
 
     <div class="chekcout_areaContainer">
 
-        <!-- <div class="checkout">
-
+        <div>
             <div>
-                <p>Express Checkout</p>
                 <div>
-                    <img src="/icons/Shop_pay.png" alt="Shop Pay payment">
-                    <img src="/icons/Paypal.png" alt="Paypal payment">
-                    <img src="/icons/G_pay.png" alt="Google pay payment">
+                    <p>Contact</p>
+                    <p id="user_email">ucasl62@gmail.com</p>
+                    <a>Change</a>
+                </div>
+                <div>
+                    <p>Ship to</p>
+                    <p id="user_address">207-211 Grattan St</p>
+                    <a>Change</a>
                 </div>
             </div>
-
             <div>
-                <hr>
-                <span>OR</span>
-                <hr>
+                <p>Shipping method</p>
+                <form>
+                    <div>
+                        <input type="checkbox" id="standard" name="shipMethod" value="standard" checked><label for="standard">Standard</label>
+                        <p>Free</p>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="express" name="shipMethod" value="express"><label for="express">express</label>
+                        <p>$15.00</p>
+                    </div>
+                    <div class="nextStep">
+                        <a href="/Html/checkout.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
+                        <input type="submit" value="Continue to payment">
+                    </div>
+                </form>
             </div>
+        </div>
 
-            <form class="chekcout_form" action="/Html/checkout_shipping.html" method="get">
-                <div>
-                    <p class="checkout_subtitle">Contact</p>
-                    <p>Already have an account?<a>Log in</a></p>
-                </div>
-                <label for="email">Your email</label>
-                <input type="email" id="email" name="email" required>
-                <div class="form_checkbox">
-                    <input type="checkbox" id="email_checkbox"><label for="email_checkbox">Email me with news and offers</label>
-                </div>
-
-                <p class="checkout_subtitle">Shipping address</p>
-                <label for="country">Country/Region</label>
-                <select id="country" name="country" required>
-                    <option value="">Country/Region</option>
-                    <option value="Australia">Australia</option>
-                    <option value="China">China</option>
-                    <option value="France">France</option>
-                    <option value="Greek">Greek</option>
-                    <option value="India">India</option>
-                    <option value="Italy">Italy</option>
-                    <option value="Japan">Japan</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="United States">United States</option>
-                    <option value="South Korea">South Korea</option>
-                    <option value="Vietnam">Vietnam</option>
-                </select>
-
-                <div class="form_name">
-                    <div>
-                        <label class="form_adjust" for="firstName">First name (optional)</label>
-                        <input type="text" id="firstName" name="firstName" pattern="[a-zA-Z ]+"
-                            title="Please enter only letters and space, e.g. John">
-                    </div>
-                    <div>
-                        <label class="form_adjust" for="lasttName">Last name</label>
-                        <input type="text" id="lastName" name="lastName" required pattern="[A-Za-z ]+"
-                            title="Please enter only letters and space, e.g. John">
-                    </div>
-                </div>
-
-                <label class="form_adjust" for="company">Company (optional)</label>
-                <input type="text" id="company" name="company">
-
-                <label class="form_adjust" for="address">Address</label>
-                <input type="text" id="address" name="address" required>
-
-                <label class="form_adjust" for="apartment">Apartment, suite, etc. (optional)</label>
-                <input type="text" id="apartment" name="apartment">
-
-                <div class="form_region">
-                    <div>
-                        <label class="form_adjust" for="city">City</label>
-                        <input type="text" id="city" name="city" required>
-                    </div>
-
-                    <div>
-                        <label class="form_adjust" for="state">State</label>
-                        <select id="state" name="state" required>
-                            <option value="">State</option>
-                            <option value="Victoria">Victoria</option>
-                            <option value="Queensland">Queensland</option>
-                            <option value="South Australia">South Australia</option>
-                            <option value="Western Australia">Western Australia</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="form_adjust" for="postcode">Postcode</label>
-                        <input type="text" id="postcode" name="postcode" required pattern="\d{4,4}"
-                            title="Please enter only 4 digits" >
-                    </div>
-                </div>
-                
-                <label class="form_adjust" for="phone">Phone (optional)</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9 +-]+"
-                    title="Please enter only digits, hyphen and plus sign for your region">
-
-                <div class="nextStep">
-                    <a href="/Html/cart_summary.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to cart summary</a>
-                    <input type="submit" value="Continue to shipping">
-                </div>
-            </form>
-        </div> -->
-        
         <div class="orderSummary" id="orderSummary_opened">
             <p class="phone_remove">Order Summary</p>
             <div class="sideCart_items_container order">
