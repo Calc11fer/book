@@ -27,12 +27,12 @@ function toSearchResult() {
 
 // cart_icon and user_icon hover effect 
 function cartClick() {
-    if (cart_icon.getAttribute("src") === "icons/cart_icon.png") {
-        cart_icon.src = "icons/cart_icon_clicked.png";
+    if (cart_icon.getAttribute("src") === "/book/icons/cart_icon.png") {
+        cart_icon.src = "/book/icons/cart_icon_clicked.png";
         sideCart.style.display = "block";
     } else {
         sideCart.style.display = "none";
-        cart_icon.src = "icons/cart_icon.png";
+        cart_icon.src = "/book/icons/cart_icon.png";
     }
 }
 
@@ -40,11 +40,11 @@ cart_icon_container.addEventListener("click", cartClick);
 
 
 user_icon.addEventListener("mouseover", () => {
-    user_icon.src = "icons/user_icon_hover.png";
+    user_icon.src = "/book/icons/user_icon_hover.png";
 });
 
 user_icon.addEventListener("mouseout", () => {
-    user_icon.src = "icons/user_icon.png";
+    user_icon.src = "/book/icons/user_icon.png";
 });
 
 
@@ -60,10 +60,6 @@ function closeSearch() {
     searchBar_open.style.display = "none";
     searchBg_open.style.display = "none";
 }
-
-
-
-
 
 
 
@@ -114,7 +110,7 @@ if (cart_items.innerHTML < 1) {
 
 // detect the whether the product has been added or not
 function product_1_detect() {
-    if (product_1.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_1.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_1();
     } else {
         removeProduct_1();
@@ -136,7 +132,7 @@ function addProduct_1() {
     subtotalPrice += parseFloat(books_price[0].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
 
-    product_1.src = "icons/cart_bt_clicked.png";
+    product_1.src = "/book/icons/cart_bt_clicked.png";
     item_1.style.display = "flex";
 }
 
@@ -146,7 +142,7 @@ function removeProduct_1() {
     subtotalPrice -= parseFloat(books_price[0].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
     
-    product_1.src = "icons/cart_bt.png";
+    product_1.src = "/book/icons/cart_bt.png";
     item_1.style.display = "none";
 
     // double checking whether the cart is empty or not
@@ -158,7 +154,7 @@ function removeProduct_1() {
 }
 
 function product_2_detect() {
-    if (product_2.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_2.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_2();
     } else {
         removeProduct_2();
@@ -178,7 +174,7 @@ function addProduct_2() {
     subtotalPrice += parseFloat(books_price[1].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
 
-    product_2.src = "icons/cart_bt_clicked.png";
+    product_2.src = "/book/icons/cart_bt_clicked.png";
     item_2.style.display = "flex";
 }
 
@@ -187,7 +183,7 @@ function removeProduct_2() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[1].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_2.src = "icons/cart_bt.png";
+    product_2.src = "/book/icons/cart_bt.png";
     item_2.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -199,7 +195,7 @@ function removeProduct_2() {
 
 
 function product_3_detect() {
-    if (product_3.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_3.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_3();
     } else {
         removeProduct_3();
@@ -218,7 +214,7 @@ function addProduct_3() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice += parseFloat(books_price[2].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_3.src = "icons/cart_bt_clicked.png";
+    product_3.src = "/book/icons/cart_bt_clicked.png";
     item_3.style.display = "flex";
 }
 
@@ -227,7 +223,7 @@ function removeProduct_3() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[2].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_3.src = "icons/cart_bt.png";
+    product_3.src = "/book/icons/cart_bt.png";
     item_3.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -239,7 +235,7 @@ function removeProduct_3() {
 
 
 function product_4_detect() {
-    if (product_4.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_4.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_4();
     } else {
         removeProduct_4();
@@ -258,7 +254,7 @@ function addProduct_4() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice += parseFloat(books_price[3].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_4.src = "icons/cart_bt_clicked.png";
+    product_4.src = "/book/icons/cart_bt_clicked.png";
     item_4.style.display = "flex";
 }
 
@@ -267,7 +263,7 @@ function removeProduct_4() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[3].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_4.src = "icons/cart_bt.png";
+    product_4.src = "/book/icons/cart_bt.png";
     item_4.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -279,7 +275,7 @@ function removeProduct_4() {
 
 
 function product_5_detect() {
-    if (product_5.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_5.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_5();
     } else {
         removeProduct_5();
@@ -298,7 +294,7 @@ function addProduct_5() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice += parseFloat(books_price[4].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_5.src = "icons/cart_bt_clicked.png";
+    product_5.src = "/book/icons/cart_bt_clicked.png";
     item_5.style.display = "flex";
 }
 
@@ -307,7 +303,7 @@ function removeProduct_5() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[4].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_5.src = "icons/cart_bt.png";
+    product_5.src = "/book/cons/cart_bt.png";
     item_5.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -319,7 +315,7 @@ function removeProduct_5() {
 
 
 function product_6_detect() {
-    if (product_6.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_6.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_6();
     } else {
         removeProduct_6();
@@ -338,7 +334,7 @@ function addProduct_6() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice += parseFloat(books_price[5].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_6.src = "icons/cart_bt_clicked.png";
+    product_6.src = "/book/icons/cart_bt_clicked.png";
     item_6.style.display = "flex";
 }
 
@@ -347,7 +343,7 @@ function removeProduct_6() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[5].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_6.src = "icons/cart_bt.png";
+    product_6.src = "/book/icons/cart_bt.png";
     item_6.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -359,7 +355,7 @@ function removeProduct_6() {
 
 
 function product_7_detect() {
-    if (product_7.getAttribute("src") === "icons/cart_bt.png") {
+    if (product_7.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_7();
     } else {
         removeProduct_7();
@@ -378,7 +374,7 @@ function addProduct_7() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice += parseFloat(books_price[6].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_7.src = "icons/cart_bt_clicked.png";
+    product_7.src = "/book/icons/cart_bt_clicked.png";
     item_7.style.display = "flex";
 }
 
@@ -387,7 +383,7 @@ function removeProduct_7() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[6].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_7.src = "icons/cart_bt.png";
+    product_7.src = "/book/icons/cart_bt.png";
     item_7.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
@@ -400,7 +396,7 @@ function removeProduct_7() {
 
 function close_sideCart() {
     sideCart_open.style.display = "none";
-    cart_icon.src = "icons/cart_icon.png";
+    cart_icon.src = "/book/icons/cart_icon.png";
 }
 
 
