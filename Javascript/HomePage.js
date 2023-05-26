@@ -303,7 +303,7 @@ function removeProduct_5() {
     title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
     subtotalPrice -= parseFloat(books_price[4].innerHTML.slice(1));
     document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product_5.src = "/book/cons/cart_bt.png";
+    product_5.src = "/book/icons/cart_bt.png";
     item_5.style.display = "none";
 
     if (cart_items.innerHTML < 1) {
