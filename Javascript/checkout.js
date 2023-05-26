@@ -121,12 +121,16 @@ const address = document.getElementById("address");
 const city = document.getElementById("city");
 const state = document.getElementById("state");
 const postcode = document.getElementById("postcode");
+const payment = document.getElementById("payment");
+const adjustPopup = document.getElementById("adjustPopup");
+const popup_dropShadow = document.getElementById("popup_dropShadow");
 let checkout = document.getElementsByClassName("checkout");
 let checkout_shipping = document.getElementsByClassName("checkout_shipping");
 let shipping_method = document.getElementsByClassName("shipping_method");
 let paymentPage = document.getElementsByClassName("paymentPage");
 let shipMethod_checked = document.getElementsByClassName("shipMethod_checked");
 let navbar_links = document.getElementsByClassName("navbar_links");
+let recipt = document.getElementsByClassName("recipt");
 
 
 function returnToInfo() {
@@ -188,7 +192,7 @@ userInfo_form.addEventListener("submit", function(e) {
     navbar_links[3].style.color = "#4A4A4A";
     navbar_links[1].style.fontWeight = "normal";
     navbar_links[1].style.color = "#4A4A4A";
-    
+
     const emailNew = email.value;
     const countryNew = country.value;
     const lastNameNew = lastName.value;
@@ -225,4 +229,30 @@ shipping_form.addEventListener("submit", function(e) {
         document.getElementById("final_shipMethod").innerHTML = "$15";
         document.getElementById("totalPrice").innerHTML = "$201.52";
     }
+});
+
+payment.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const emailNew = email.value;
+    const countryNew = country.value;
+    const lastNameNew = lastName.value;
+    const addressNew = address.value;
+    const cityNew = city.value;
+    const stateNew = state.value;
+    const postcodeNew = postcode.value;
+
+    adjustPopup.style.display = "flex";
+    popup_dropShadow.style.display = "block";
+    document.getElementById("final_shipAddress").innerHTML = lastNameNew + ", " + addressNew + " " + cityNew + " " 
+        + stateNew + " " + postcodeNew + " " + countryNew + ", contact via " +  emailNew;
+    // to make the month and day in the format of mm, learned from https://www.scaler.com/topics/get-current-date-in-javascript/
+    let currentDate = new Date();
+    let currentMonth = String(currentDate.getMonth()+1).padStart(2,"0");
+    let currentDay = String(currentDate.getDate()).padStart(2, '0');
+    let currentYear = currentDate.getFullYear();
+    recipt[0].innerHTML = currentDay + " " + currentMonth + " " + currentYear;
+    recipt[1].innerHTML = lastNameNew + ", " + addressNew + " " + cityNew + " " 
+        + stateNew + " " + postcodeNew + " " + countryNew;
+    recipt[2].innerHTML = document.getElementById("final_shipMethod").innerHTML;
+    recipt[3].innerHTML = document.getElementById("totalPrice").innerHTML;
 });

@@ -23,7 +23,6 @@
 
 </head>
 <body>
-
     <!-- The top bar stick to the top of the screen-->
     <div class="topBar">
         <div class="topBar_container">
@@ -191,9 +190,9 @@
         </div>
     </div>
 
+    
     <!--the searching area in phone version,  appear after the user click search button-->
-    <div class="searchBar_drop_shadow" id="searchBg_open">
-    </div>
+    <div class="searchBar_drop_shadow" id="searchBg_open"></div>
     <div class="searchBar_container computer_remove" id="searchBar_open">
         <form class="searchBar_phone" action="/Html/search_results.html" method="get">
             <input id="search_input" type="text" placeholder="Search..." name="search">
@@ -201,7 +200,7 @@
         </form>
     </div>
 
-
+    
     <!-- Checkout navbar-->
     <div class="checkout_navbarContainer">
         <h2>CHECK OUT</h2>
@@ -215,6 +214,122 @@
             <a class="navbar_links">Payment</a>
         </div>
     </div>
+
+    <div id="popup_dropShadow"></div>
+    <!-- Payment success popup -->
+    <div id="adjustPopup">
+        <div class="popup_container">
+            <div>
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <p>Payment success, thank you for shopping at Books At Manic!</p>
+            </div>
+            <div>
+                <div>
+                    <div class="sideCart_items_container popup">
+                        <div class="sideCart_items order">
+                            <div>
+                                <div><img src="/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
+                                <div class="sideCart_itemInfo">
+                                    <div>
+                                        <p>The Memory Police</p>
+                                        <p>Yoko Ogawa</p>
+                                    </div>
+                                    <p>$59.99</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="sideCart_quantityContainer order">Qty:
+                                    <span>
+                                        <span>1</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sideCart_items order">
+                            <div>
+                                <div><img src="/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
+                                <div class="sideCart_itemInfo order">
+                                    <div>
+                                        <p>Empty Hearts</p>
+                                        <p>Juli Zeh</p>
+                                    </div>
+                                    <p>$79.95</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="sideCart_quantityContainer order">Qty:
+                                    <span>
+                                        <span>1</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="sideCart_items order">
+                            <div>
+                                <div><img src="/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
+                                <div class="sideCart_itemInfo order">
+                                    <div>
+                                        <p>Booth</p>
+                                        <p>Karen Joy Fowler</p>
+                                    </div>
+                                    <p>$39.95</p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="sideCart_quantityContainer order">Qty:
+                                    <span>
+                                        <span>1</span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div>
+                            <p><ion-icon name="airplane-outline"></ion-icon>Delivering to:</p>
+                            <p id="final_shipAddress"></p>
+                        </div>
+
+                        <div>
+                            <p><ion-icon name="today-outline"></ion-icon>Estimated delivery:</p>
+                            <p id="estDate">Monday, 20 June</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="recipt_container">
+                    <p><ion-icon name="newspaper-outline"></ion-icon>Invoice:</p>
+                    <div>
+                        <p>Invoice Number:</p>
+                        <p>INV-4953-23-1234</p>
+                        <p>Date: <span class="recipt"></span></p>
+                    </div>
+                    <div>
+                        <p>Seller:</p>
+                        <p>Bookstore 123 Main Street City, State 12345, Phone: 555-555-1234</p>
+                    </div>
+                    <div>
+                        <p>Buyer: <span class="recipt"></span></p>
+                    </div>
+                    <div>
+                        <p>Item:</p>
+                        <p>Book Title: The Memory Police Author: Yoko Ogawa Quantity: 1 Price: $59.99</p>
+                        <p>Book Title: Empty Hearts Author: Juli Zeh Quantity: 1 Price: $79.95</p>   
+                        <p>Book Title: Booth Author: Karen Joy Fowler Quantity: 1 Price: $39.95</p>
+                    </div>
+                    <div>
+                        <p>Subtotal: $179.89</p>
+                        <p>Tax: $6.63</p>
+                        <p>Shipping: <span class="recipt">FREE</span></p>
+                        <p>Total: <span class="recipt">$179.89</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
 
     <!-- The whole checkout processes, information - shipping - payment -->
     <div class="chekcout_areaContainer">

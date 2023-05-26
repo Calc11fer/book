@@ -2960,3 +2960,66 @@ footer div img {
     }
     
 }
+
+
+/* Payment success popup */
+
+/* To adjust the popup in the center of the page */
+#adjustPopup {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
+#popup_dropShadow {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 106%;
+    backdrop-filter: brightness(70%);
+    z-index: 1;
+    transform: translateY(-200px);
+}
+
+.popup_container {
+    background-color: white;
+    padding: 3vw;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup_container > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+
+.popup_container > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-top: 1px solid var(--tx--quinary);
+    padding-top: 2vw;
+} 
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) {
+    border-right: 1px solid var(--tx--quinary);
+    padding-right: 1vw;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(2) {
+    padding-left: 1vw;
+}
+
+.sideCart_items_container.popup {
+    height: 28vw;
+    margin-top: 0;
+    padding: 0;
+}
