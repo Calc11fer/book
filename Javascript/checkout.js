@@ -122,14 +122,34 @@ const city = document.getElementById("city");
 const state = document.getElementById("state");
 const postcode = document.getElementById("postcode");
 let checkout = document.getElementsByClassName("checkout");
+let checkout_shipping = document.getElementsByClassName("checkout_shipping");
 let shipping_method = document.getElementsByClassName("shipping_method");
 let paymentPage = document.getElementsByClassName("paymentPage");
+let shipMethod_checked = document.getElementsByClassName("shipMethod_checked");
 
+
+function checked_1() {
+    shipMethod_checked[0].style.backgroundColor = "#EDF2F8";
+    shipMethod_checked[0].style.borderColor = "#0460FB";
+    shipMethod_checked[1].style.backgroundColor = "white";
+    shipMethod_checked[1].style.borderColor = "#ACACAC";
+}
+
+function checked_2() {
+    shipMethod_checked[1].style.backgroundColor = "#EDF2F8";
+    shipMethod_checked[1].style.borderColor = "#0460FB";
+    shipMethod_checked[0].style.backgroundColor = "white";
+    shipMethod_checked[0].style.borderColor = "#ACACAC";
+}
+
+
+
+// grab the information that user typed in, and go to "shipping", which is the second procedure in check out 
 userInfo_form.addEventListener("submit", function(e) {
     // in order to prevent the broswer to refresh itself.
     e.preventDefault();
     checkout[0].style.display = "none"
-
+    checkout_shipping[0].style.display = "block";
     const emailNew = email.value;
     const countryNew = country.value;
     const lastNameNew = lastName.value;
@@ -142,16 +162,19 @@ userInfo_form.addEventListener("submit", function(e) {
         + stateNew + " " + postcodeNew + " " + countryNew;
 });
 
-// changing shipping method
+// changing the shipping method
 shipping_form.addEventListener("submit", function(e) {
     e.preventDefault();
     shipping_method[0].style.display = "none";
     paymentPage[0].style.display = "flex";
-    // paymentPage[1].style.display = "flex";
+    paymentPage[1].style.display = "block";
     let shipMethod = document.querySelector('input[name="shipMethod"]:checked').value;
     if (shipMethod === "standard") {
         document.getElementById("shipping_standard").style.display = "block";
+        document.getElementById("final_shipMethod").innerHTML = "FREE";
     } else {
         document.getElementById("shipping_express").style.display = "block";
+        document.getElementById("final_shipMethod").innerHTML = "$15";
+        document.getElementById("totalPrice").innerHTML = "$201.52";
     }
 });

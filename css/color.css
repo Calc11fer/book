@@ -283,14 +283,18 @@
 .cartSummary_shop:hover {
   background-color: rgb(241, 241, 241);
 }
+
+
 /* Checkout Page ======================================================================= */
 
 .checkout_navbarContainer h2, .orderSummary_priceInfo div:nth-child(3) p:nth-child(1), 
-.orderSummary_priceInfo div:nth-child(3) span {
+.orderSummary_priceInfo div:nth-child(3) span, #shipping_form > div:nth-child(1) div div label, #shipping_form > div:nth-child(1) div p,
+.shipping_info div div p:nth-child(1), #payment > p:nth-child(2), .payment_creditCard > div:nth-child(1) div label, 
+.payment_paypal label, .payment_pOrder label, .payment_creditCard > div:nth-child(2) div label, #payment > div:nth-of-type(2) label {
   color: var(--tx--secondary);
 }
 
-.orderSummary_priceInfo div:nth-child(3) p:nth-child(2) {
+.orderSummary_priceInfo div:nth-child(3) p:nth-child(2), #totalPrice {
   color: var(--important);
 }
 
@@ -298,11 +302,12 @@
   color: var(--clickable);
 }
 
-.navbar_links, .orderSummary_priceInfo div:nth-last-child(n+2) p, .orderSummary_priceInfo > p {
+.navbar_links, .orderSummary_priceInfo div:nth-last-child(n+2) p, .orderSummary_priceInfo > p,
+.shipping_info div div p:nth-child(2), #shipping_express {
   color: var(--tx--tertiary);
 }
 
-.navbar_links.checkout_cart {
+.navbar_links.checkout_cart, .shipping_info div a {
   color: var(--clickable);
 }
 
@@ -323,3 +328,8 @@
 .orderSummary_discountCode button:hover {
   background-color: var(--bt--primary--hover);
 }
+
+
+
+
+
