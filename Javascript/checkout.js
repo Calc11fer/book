@@ -111,8 +111,9 @@ window.addEventListener("load", () => {
 // let shipMethod = document.querySelector('input[name="shipMethod"]:checked').value;
 // console.log(shipMethod);
 
-
-const form = document.getElementById("form");
+// Collecting the datas which user typed in the form
+const userInfo_form = document.getElementById("userInfo_form");
+const shipping_form = document.getElementById("shipping_form");
 const email = document.getElementById("email");
 const country = document.getElementById("country");
 const lastName = document.getElementById("lastName");
@@ -120,8 +121,15 @@ const address = document.getElementById("address");
 const city = document.getElementById("city");
 const state = document.getElementById("state");
 const postcode = document.getElementById("postcode");
+let checkout = document.getElementsByClassName("checkout");
+let shipping_method = document.getElementsByClassName("shipping_method");
+let paymentPage = document.getElementsByClassName("paymentPage");
 
-form.addEventListener("submit", function(e) {
+userInfo_form.addEventListener("submit", function(e) {
+    // in order to prevent the broswer to refresh itself.
+    e.preventDefault();
+    checkout[0].style.display = "none"
+
     const emailNew = email.value;
     const countryNew = country.value;
     const lastNameNew = lastName.value;
@@ -129,5 +137,21 @@ form.addEventListener("submit", function(e) {
     const cityNew = city.value;
     const stateNew = state.value;
     const postcodeNew = postcode.value;
-    
-})
+    document.getElementById("user_email").innerHTML = emailNew;
+    document.getElementById("user_address").innerHTML = addressNew + " " + cityNew + " " 
+        + stateNew + " " + postcodeNew + " " + countryNew;
+});
+
+// changing shipping method
+shipping_form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    shipping_method[0].style.display = "none";
+    paymentPage[0].style.display = "flex";
+    // paymentPage[1].style.display = "flex";
+    let shipMethod = document.querySelector('input[name="shipMethod"]:checked').value;
+    if (shipMethod === "standard") {
+        document.getElementById("shipping_standard").style.display = "block";
+    } else {
+        document.getElementById("shipping_express").style.display = "block";
+    }
+});

@@ -2109,6 +2109,7 @@ footer div img {
 .checkout {
     width: 43vw;
     margin-right: 7vw;
+    display: none;
 }
 
 .checkout > div:nth-child(1) {
@@ -2624,4 +2625,17 @@ footer div img {
     .sideCart_removeBt.order {
         margin-bottom: 2vw;
     }
+}
+
+/* checkout shipping method */
+
+.shipping_info div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#shipping_standard, #shipping_express, #paymentPage{
+    display: none;
 }

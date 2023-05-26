@@ -23,7 +23,8 @@
 
 </head>
 <body>
-    <!-- Top bar -->
+
+    <!-- The top bar stick to the top of the screen-->
     <div class="topBar">
         <div class="topBar_container">
             <img id="brand_icon" src="/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
@@ -79,7 +80,7 @@
             </div>  
         </div>
         
-            <!-- side cart -->
+            <!-- side cart, which is the drop down cart when user click cart icon -->
         <div class="sideCart" id="sideCart-open">
 
             <div class="sideCart_title">
@@ -200,7 +201,8 @@
         </form>
     </div>
 
-    <!-- Checkout area -->
+
+    <!-- Checkout navbar-->
     <div class="checkout_navbarContainer">
         <h2>CHECK OUT</h2>
         <div>
@@ -214,6 +216,7 @@
         </div>
     </div>
 
+    <!-- The whole checkout processes, information - shipping - payment -->
     <div class="chekcout_areaContainer">
 
         <div class="checkout">
@@ -233,7 +236,7 @@
                 <hr>
             </div>
 
-            <form id="form" class="chekcout_form" action="/Html/checkout_shipping.html" method="get">
+            <form id="userInfo_form" class="chekcout_form" method="get">
                 <div>
                     <p class="checkout_subtitle">Contact</p>
                     <p>Already have an account?<a>Log in</a></p>
@@ -317,7 +320,113 @@
                 </div>
             </form>
         </div>
-        
+
+        <div class="checkout_shipping">
+
+            <div class="shipping_info">
+                <div>
+                    <p>Contact</p>
+                    <p id="user_email">ucasl62@gmail.com</p>
+                    <a>Change</a>
+                </div>
+                <div>
+                    <p>Ship to</p>
+                    <p id="user_address">207 - 211 Carltaon csasda varit 3053 Audstarlia</p>
+                    <a>Change</a>
+                </div>
+                <div class="paymentPage">
+                    <p>Method</p>
+                    <p id="shipping_standard">Standard - <span>FREE</span></p>
+                    <p id="shipping_express">Express - <span>$15</span></p>
+                    <a>Change</a>
+                </div>
+            </div>
+
+            <div class="shipping_method">
+                <p>Shipping method</p>
+                <form id="shipping_form" method="get">
+                    <div>
+                        <input type="radio" id="standard" name="shipMethod" value="standard" checked><label for="standard">Standard</label>
+                        <p>Free</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="express" name="shipMethod" value="express"><label for="express">Express</label>
+                        <p>$15.00</p>
+                    </div>
+                    <div class="nextStep">
+                        <a><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
+                        <input type="submit" value="Continue to payment">
+                    </div>
+                </form>
+            </div>
+
+            <form id="payment" class="paymentPage">
+                <div>
+                    <div class="payment_creditCard">
+                        <div>
+                            <input type="radio" id="creditCard" name="paymentOpt" checked><label for="creditCard">Credit card</label>
+                            <div>
+                                <img src="/icons/AMEX_Icon.png" alt="American express">
+                                <img src="/icons/VISA_icon.png" alt="Visa">
+                                <img src="/icons/Mastercard_icon.png" alt="Mastercard">
+                                <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
+                                <img src="/icons/Apple_icon.png" alt="Apple pay">
+                            </div>
+                        </div>
+                        <div>
+    
+                            <div>
+                                <label for="cardNumber">*Card number</label>
+                                <input type="text" id="cardNumber" required pattern="[0-9]+" title="please only enter digits">
+                            </div>
+    
+                            <div>
+                                <label for="cardName">*Name on card</label>
+                                <input type="text" id="cardName" required pattern="[a-zA-Z ]+" title="please only use letters and space, e.g. John Smith">
+                            </div>
+    
+                            <div>
+                                <div>
+                                    <label for="cardDate">*Expiration date</label>
+                                    <input type="text" id="cardDate" placeholder="MM/YY" required pattern="([0-9]{2}[/]?){2}" title="please follow the syntax given">
+                                </div>
+                                
+                                <div>
+                                    <label for="cardCode">*Security code</label>
+                                    <input type="text" id="cardCode" required pattern="\d{3,3}" title="please enter only 3 digits">
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <input type="radio" id="paypal" name="paymentOpt" disabled>
+                            <label for="paypal">Paypal</label>
+                        </div>
+                        <img src="/icons/Paypal_innerIcon.png" alt="Paypal pay">
+                    </div>
+                    <div>
+                        <input type="radio" id="purchaseOrder" name="paymentOpt" disabled>
+                        <label for="purchaseOrder">Purchase order</label>
+                    </div>
+                </div>
+                <p>Remember me</p>
+                <div>
+                    <input type="checkbox" id="saveUserInfo">
+                    <label for="saveUserInfo">Save my information for a faster checkout</label>
+                </div>
+
+                <div class="nextStep">
+                    <a><ion-icon name="chevron-back-outline"></ion-icon>Return to shipping</a>
+                    <input type="submit" value="Proceed payment">
+                </div>
+            </form>
+
+        </div>
+
+
+        <!-- order summary on the left side of the page  -->
         <div class="orderSummary" id="orderSummary_opened">
             <p class="phone_remove">Order Summary</p>
             <div class="sideCart_items_container order">
