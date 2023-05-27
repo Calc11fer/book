@@ -71,8 +71,12 @@
     font-weight: normal;
 }
 
- img, input[type="radio"], input[type="checkbox"], a, button{
+img, input[type="radio"], input[type="checkbox"], a, button{
     cursor: pointer;
+}
+
+.notDesigned {
+    cursor: not-allowed;
 }
 
 
