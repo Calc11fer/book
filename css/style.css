@@ -118,7 +118,7 @@
 }
 
 #cart_icon:hover {
-    content: url("/icons/cart_icon_hover.png");
+    content: url("/book/icons/cart_icon_hover.png");
 }
 
 #cart_items {
