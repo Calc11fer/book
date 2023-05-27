@@ -803,6 +803,7 @@ footer div img {
 }
 
 .clickable_text {
+    display: block;
     font-size: calc(var(--_size)*1.2);
     text-align:center;
     margin-top: 8vw;
