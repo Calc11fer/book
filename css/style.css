@@ -155,10 +155,6 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     filter: blur(6px) brightness(80%);
 }
 
-#heading_scrollLeft, #heading_scrollRight {
-    cursor: pointer;
-}
-
 
 @keyframes zoomOut {
     0% {
