@@ -83,12 +83,12 @@
         <div class="sideCart" id="sideCart-open">
 
             <div class="sideCart_title">
-                <p>YOUR CART - <span>3</span> items total</p>
+                <p>YOUR CART - <span class="clearNumber">3</span> items total</p>
                 <ion-icon id="cart_close" name="close-outline"></ion-icon>
             </div>
             
             <div class="sideCart_items_container" id="sideCart_addItems">
-                <div class="sideCart_items">
+                <div class="sideCart_items clearCart">
                     <div>
                         <div><img src="/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
@@ -110,7 +110,7 @@
                         <a class="sideCart_removeBt">remove</a>
                     </div>
                 </div>
-                <div class="sideCart_items">
+                <div class="sideCart_items clearCart">
                     <div>
                         <div><img src="/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
@@ -132,7 +132,7 @@
                         <a class="sideCart_removeBt">remove</a>
                     </div>
                 </div>
-                <div class="sideCart_items">
+                <div class="sideCart_items clearCart">
                     <div>
                         <div><img src="/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
@@ -166,7 +166,7 @@
             <div class="subtotalPrice_container">
                 <div>
                     <p>Subtotal:</p>
-                    <p><span>3</span> items total</p>
+                    <p><span class="clearNumber">3</span> items total</p>
                 </div>
                 <div>
                     <p>$<span id="subtotalPrice">179.89</span></p>
@@ -293,7 +293,7 @@
 
                         <div>
                             <p><ion-icon name="today-outline"></ion-icon>Estimated delivery:</p>
-                            <p id="estDate">Monday, 20 June</p>
+                            <p id="estDate"></p>
                         </div>
                     </div>
 
@@ -310,7 +310,8 @@
                         <p>Bookstore 123 Main Street City, State 12345, Phone: 555-555-1234</p>
                     </div>
                     <div>
-                        <p>Buyer: <span class="recipt"></span></p>
+                        <p>Buyer:</p>
+                        <p class="recipt"></p>
                     </div>
                     <div>
                         <p>Item:</p>
@@ -326,6 +327,7 @@
                     </div>
                 </div>
             </div>
+            <a href="/index.html">Keep Shopping</a>
         </div>
     
     </div>

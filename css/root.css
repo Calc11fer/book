@@ -125,6 +125,7 @@
         --background--heading: #F8ECC7;
     
         /* shadow */
+        --popup--shadow: 0px 0px 0.2em rgba(0, 0, 0, 0.583);
         --img--shadow: 1px 2px 0.2em rgba(0, 0, 0, 0.482);
         --tx--shadow: 2px 2px 0.2em #171717;
         --bg--shadow--hover: 0px 2px 0.2em rgba(0, 0, 88, 0.2);

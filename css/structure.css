@@ -2073,7 +2073,7 @@ footer div img {
         margin-top: 4vw;
     }
 }
-/* Checkout Page ======================================================================= */
+/* Checkout Page =========================================================================================================== */
 
 .checkout_navbarContainer h2 {
     font-size: calc(var(--_size)*2.5);
@@ -2205,7 +2205,7 @@ footer div img {
 } 
 
 .form_region div input, .form_region div select {
-    width: 12.5vw;
+    width: 13.7vw;
 }
 
 .form_name, .orderSummary_priceInfo div {
@@ -2220,7 +2220,7 @@ footer div img {
 }
 
 #firstName, #lastName {
-    width: 19.3vw;
+    width: 21vw;
 }
 
 .nextStep {
@@ -2962,7 +2962,7 @@ footer div img {
 }
 
 
-/* Payment success popup */
+/* Payment success popup ============================================================================================================ */
 
 /* To adjust the popup in the center of the page */
 #adjustPopup {
@@ -2978,26 +2978,44 @@ footer div img {
     display: none;
     width: 100%;
     height: 106%;
-    backdrop-filter: brightness(70%);
     z-index: 1;
     transform: translateY(-200px);
 }
 
 .popup_container {
-    background-color: white;
     padding: 3vw;
-    width: 50vw;
+    width: 55vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.popup_container > a {
+    margin-top: 3vw;
+    color: var(--clickable);
+    font-size: calc(var(--_size)*1.3);
+    text-decoration: underline 0.15vw;
+}
+
 .popup_container > div:nth-of-type(1) {
+    width: 44vw;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
     padding-bottom: 1vw;
+}
+
+.popup_container > div:nth-of-type(1) ion-icon {
+    font-size: calc(var(--_size)*4);
+}
+
+.popup_container > div:nth-of-type(1) p {
+    font-size: calc(var(--_size)*1.8);
+    line-height: 2.5vw;
+    width: 35vw;
+    margin-left: 1vw;
 }
 
 .popup_container > div:nth-of-type(2) {
@@ -3005,21 +3023,164 @@ footer div img {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    border-top: 1px solid var(--tx--quinary);
-    padding-top: 2vw;
 } 
 
 .popup_container > div:nth-of-type(2) > div:nth-of-type(1) {
-    border-right: 1px solid var(--tx--quinary);
-    padding-right: 1vw;
+    padding-top: 1vw;
+    padding-right: 2vw;
 }
 
-.popup_container > div:nth-of-type(2) > div:nth-of-type(2) {
-    padding-left: 1vw;
+.recipt_container {
+    padding-left: 2vw;
+    padding-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div {
+    margin-top: 1vw;
+    padding-top: 1vw;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1) {
+    margin-bottom: 0.3vw;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1) {
+    font-size: calc(var(--_size)*1.4);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div ion-icon,
+.popup_container > div:nth-of-type(2) > div:nth-of-type(2) ion-icon {
+    font-size: calc(var(--_size)*2);
+    margin-right: 0.5vw;
+}
+
+.recipt_container div {
+    margin-top: 1vw;
+}
+
+#final_shipAddress, #estDate, .recipt_container div p {
+    font-size: calc(var(--_size)*1.2);;
 }
 
 .sideCart_items_container.popup {
     height: 28vw;
     margin-top: 0;
-    padding: 0;
+    padding: 1vw 0 0 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    #adjustPopup {
+        position: absolute;
+        display: none;
+        justify-content: center;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    #popup_dropShadow {
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 104%;
+        z-index: 1;
+        transform: translateY(-20vw);
+    }
+    
+    .popup_container {
+        padding: 5vw;
+        width: 93vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup_container > a {
+        margin-top: 6vw;
+        color: var(--clickable);
+        font-size: calc(var(--_size)*1.3);
+        text-decoration: underline 0.15vw;
+    }
+    
+    .popup_container > div:nth-of-type(1) {
+        width: 90vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 1vw;
+    }
+    
+    .popup_container > div:nth-of-type(1) ion-icon {
+        font-size: calc(var(--_size)*4);
+    }
+    
+    .popup_container > div:nth-of-type(1) p {
+        font-size: calc(var(--_size)*1.8);
+        line-height: 4.5vw;
+        width: 60vw;
+        margin-left: 1vw;
+    }
+    
+    .popup_container > div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    } 
+    
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(1) {
+        padding-top: 3vw;
+        padding-right: 0vw;
+        border-right: none;
+    }
+    
+    .recipt_container {
+        padding-left: 0vw;
+        margin-right: 2vw;
+        margin-top: 2vw;
+        padding-top: 2vw;
+    }
+    
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div {
+        margin-top: 3vw;
+        padding-top: 2vw;
+    }
+    
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1) {
+        margin-bottom: 0.3vw;
+    }
+    
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1) {
+        font-size: calc(var(--_size)*1.4);
+    }
+    
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div ion-icon,
+    .popup_container > div:nth-of-type(2) > div:nth-of-type(2) ion-icon {
+        font-size: calc(var(--_size)*2);
+        margin-right: 0.5vw;
+    }
+    
+    .recipt_container div {
+        margin-top: 1vw;
+    }
+    
+    #final_shipAddress, #estDate, .recipt_container div p {
+        font-size: calc(var(--_size)*1.2);;
+    }
+    
+    .sideCart_items_container.popup {
+        height: 50vw;
+        margin-top: 0;
+        padding: 1vw 0 0 0;
+    }    
 }

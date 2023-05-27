@@ -131,7 +131,8 @@ let paymentPage = document.getElementsByClassName("paymentPage");
 let shipMethod_checked = document.getElementsByClassName("shipMethod_checked");
 let navbar_links = document.getElementsByClassName("navbar_links");
 let recipt = document.getElementsByClassName("recipt");
-
+let clearCart = document.getElementsByClassName("clearCart");
+let clearNumber = document.getElementsByClassName("clearNumber");
 
 function returnToInfo() {
     checkout[0].style.display = "block"
@@ -250,9 +251,27 @@ payment.addEventListener("submit", function(e) {
     let currentMonth = String(currentDate.getMonth()+1).padStart(2,"0");
     let currentDay = String(currentDate.getDate()).padStart(2, '0');
     let currentYear = currentDate.getFullYear();
+
+    // calculate the delivery date depending on the shipping method that user chose
+    if (document.getElementById("final_shipMethod").innerHTML === "FREE") {
+        document.getElementById("estDate").innerHTML = (parseInt(currentDay) + 6) + "/" + currentMonth;
+    } else {
+        document.getElementById("estDate").innerHTML = (parseInt(currentDay) + 2) + "/" + currentMonth;
+    }
+    
     recipt[0].innerHTML = currentDay + " " + currentMonth + " " + currentYear;
     recipt[1].innerHTML = lastNameNew + ", " + addressNew + " " + cityNew + " " 
         + stateNew + " " + postcodeNew + " " + countryNew;
     recipt[2].innerHTML = document.getElementById("final_shipMethod").innerHTML;
     recipt[3].innerHTML = document.getElementById("totalPrice").innerHTML;
+
+    // clear all the items in the cart after payment
+    for (let i=0; i<clearCart.length; i++) {
+        clearCart[i].style.display = "none";
+    }
+    for (let i=0; i<clearNumber.length; i++) {
+        clearNumber[i].innerHTML = "0";
+    }
+    document.getElementById("subtotalPrice").innerHTML = "0.00";
+    cart_items.style.display = "none";
 });

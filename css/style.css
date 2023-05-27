@@ -1,6 +1,6 @@
 /* The links in top navigation bar, headings and all titles */
 .heading_fg div a:nth-child(1), .topBar_dropdown li a, h2, .sideCart_title p, 
-.cartSummary_heading, .checkout_navbarContainer h2{
+.cartSummary_heading, .checkout_navbarContainer h2, .popup_container > div:nth-of-type(1) p {
     font-family: var(--font--primary);
 }
 
@@ -39,7 +39,8 @@
 .checkout > div:nth-child(2) span,.nextStep input, .open_orderSummaryContainer p, .shipping_info div div p:nth-child(1), .shipping_info div div p:nth-child(3),
 .shipping_info div a, .shipping_method > p, #shipping_form > div:nth-child(1) div div label, #shipping_form > div:nth-child(1) div p,
 .payment_creditCard > div:nth-child(1) div label, .payment_paypal label, .payment_pOrder label,
-#payment > p:nth-child(1), #payment > p:nth-of-type(3), .nextStep a {
+#payment > p:nth-child(1), #payment > p:nth-of-type(3), .nextStep a, .popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .popup_container > a  {
     font-family: var(--font--secondary);
 }
 
@@ -61,7 +62,8 @@
 .subtotalPrice_container > div:nth-child(1) > p:nth-child(2) span,
 .checkout_priceInfo > div:nth-child(2) > p, .summary_info >div:nth-child(2) p, .checkout label,
 .orderSummary_priceInfo > p, .orderSummary_discountCode input::placeholder, .shipping_info div div p:nth-child(2),
-.payment_creditCard > div:nth-child(2) div label, #payment > p:nth-child(2), #payment > div:nth-of-type(2) label {
+.payment_creditCard > div:nth-child(2) div label, #payment > p:nth-child(2), #payment > div:nth-of-type(2) label,
+#final_shipAddress, #estDate, .recipt_container div p {
     font-family: var(--font--quartus);
 }
 
@@ -423,11 +425,18 @@
 
 .chekcout_form input, .chekcout_form select, .orderSummary_discountCode input {
     border-radius: calc(var(--bg--radius)*0.5);
-    border: 1px solid var(--tx--quinary);
+    border: 1px solid var(--tx--tertiary);
 }
 
 .chekcout_form > div p:nth-child(2) a {
     text-decoration: underline 0.2vw;
+}
+
+.checkout > div:nth-child(2) hr {
+    outline: none;
+    border: none;
+    background-color: var(--tx--tertiary);
+    height: 1px;
 }
 
 .orderSummary {
@@ -505,4 +514,29 @@
 
 .payment_pOrder {
     border-radius: 0 0 var(--bg--radius) var(--bg--radius);
+}
+
+/* Payment success popup ============================================================================================================ */
+
+#popup_dropShadow {
+    backdrop-filter: brightness(70%);
+}
+
+.popup_container {
+    border-radius: var(--bg--radius);
+    box-shadow: var(--popup--shadow);
+}
+
+.popup_container > a {
+    text-decoration: underline 0.15vw;
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) {
+    border-top: 1px solid var(--tx--tertiary);
+    border-right: 1px solid var(--tx--tertiary);
+}
+
+.popup_container > div:nth-of-type(2) > div:nth-of-type(2),
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div {
+    border-top: 1px solid var(--tx--tertiary);
 }

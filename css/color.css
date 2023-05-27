@@ -285,12 +285,15 @@
 }
 
 
-/* Checkout Page ======================================================================= */
+/* Checkout Page and success popup ======================================================================= */
 
 .checkout_navbarContainer h2, .orderSummary_priceInfo div:nth-child(3) p:nth-child(1), 
 .orderSummary_priceInfo div:nth-child(3) span, #shipping_form > div:nth-child(1) div div label, #shipping_form > div:nth-child(1) div p,
 .shipping_info div div p:nth-child(1), #payment > p:nth-child(2), .payment_creditCard > div:nth-child(1) div label, 
-.payment_paypal label, .payment_pOrder label, .payment_creditCard > div:nth-child(2) div label, #payment > div:nth-of-type(2) label {
+.payment_paypal label, .payment_pOrder label, .payment_creditCard > div:nth-child(2) div label, #payment > div:nth-of-type(2) label,
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div ion-icon,
+.popup_container > div:nth-of-type(2) > div:nth-of-type(2) ion-icon, .popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .checkout_subtitle {
   color: var(--tx--secondary);
 }
 
@@ -303,7 +306,8 @@
 }
 
 .navbar_links, .orderSummary_priceInfo div:nth-last-child(n+2) p, .orderSummary_priceInfo > p,
-.shipping_info div div p:nth-child(2), #shipping_express {
+.shipping_info div div p:nth-child(2), #shipping_express, #final_shipAddress, #estDate, .recipt_container div p,
+.checkout > div:nth-child(1) p, .checkout > div:nth-child(2) span {
   color: var(--tx--tertiary);
 }
 
@@ -335,4 +339,16 @@
 }
 
 
+/* Payment success popup ============================================================================================================ */
+.popup_container {
+  background-color: white;
+}
 
+.popup_container > a {
+  color: var(--clickable);
+}
+
+.popup_container > div:nth-of-type(1) ion-icon, 
+.popup_container > div:nth-of-type(1) p  {
+  color: var(--success);
+}
