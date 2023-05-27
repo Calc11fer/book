@@ -475,9 +475,6 @@ product_8.addEventListener("click", product_8_detect);
 addedToCart.addEventListener("click", product_8_detect);
 remove_8.addEventListener("click", removeProduct_8);
 
-// adding and removing the current product
-
-
 
 sideCart_close.addEventListener("click", close_sideCart);
 

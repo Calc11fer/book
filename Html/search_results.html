@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Result</title>
 
-    <link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/structure.css">
-    <link rel="stylesheet" href="/css/structure_phone.css">
+    <link rel="stylesheet" href="/book/css/root.css">
+    <link rel="stylesheet" href="/book/css/color.css">
+    <link rel="stylesheet" href="/book/css/style.css">
+    <link rel="stylesheet" href="/book/css/structure.css">
+    <link rel="stylesheet" href="/book/css/structure_phone.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,16 +25,16 @@
         <!-- Top bar -->
         <div class="topBar">
             <div class="topBar_container">
-                <img id="brand_icon" src="/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
+                <img id="brand_icon" src="/book/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
                 <ul class="topBar_dropdown">
                     <li class="dropdown_list"><a class="dropdown_bt phone_remove"><span>RECOMMENDATION</span>
                         <ion-icon name="chevron-down-outline"></ion-icon>
                     </a>
                         <ul class="dropdownList_container">
-                            <li><a href="">Popular Now</a></li>
-                            <li><a href="">Best Selling</a></li>
-                            <li><a href="">New Release</a></li>
-                            <li><a href="">Promotions</a></li>
+                            <li><a href="#">Popular Now</a></li>
+                            <li><a href="#">Best Selling</a></li>
+                            <li><a href="#">New Release</a></li>
+                            <li><a href="#">Promotions</a></li>
                         </ul>
                     </li>
                     <li class="dropdown_list"><a class="dropdown_bt"><span>BOOKS</span>
@@ -61,17 +61,17 @@
                 </ul>
             </div>
             <div class="topBar_container">
-                <form class="searchBar phone_remove" action="/Html/search_results.html" method="get">
+                <form class="searchBar phone_remove" action="/book/Html/search_results.html" method="get">
                     <input id="search_input" type="text" placeholder="Search..." name="search">
                     <button type="submit"><ion-icon name="search-outline"></ion-icon></button>
                 </form>
                 <div>
                     <div id="cart_icon_container">
-                        <img id="cart_icon" src="/icons/cart_icon.png"><div id="cart_items">0</div>
+                        <img id="cart_icon" src="/book/icons/cart_icon.png"><div id="cart_items">0</div>
                     </div>
                 </div>
                 <div>
-                    <img id="user_icon" src="/icons/user_icon.png">
+                    <img id="user_icon" src="/book/icons/user_icon.png">
                 </div> 
                 <div class="searchBt_phone" onclick="openSearch()">
                     <ion-icon name="search-outline"></ion-icon></button>
@@ -89,7 +89,7 @@
                 <div class="sideCart_items_container" id="sideCart_addItems">
                     <div class="sideCart_items" id="item_1">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_1.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_1.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>The Seep</p>
@@ -111,7 +111,7 @@
                     </div>
                     <div class="sideCart_items" id="item_2">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_2.jpg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_2.jpg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>Prosper's Demon</p>
@@ -133,7 +133,7 @@
                     </div>
                     <div class="sideCart_items" id="item_3">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_3.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_3.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>The Book of Art</p>
@@ -155,7 +155,7 @@
                     </div>
                     <div class="sideCart_items" id="item_4">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_4.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_4.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>Empty Hearts</p>
@@ -177,7 +177,7 @@
                     </div>
                     <div class="sideCart_items" id="item_5">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_5.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_5.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>Booth</p>
@@ -199,7 +199,7 @@
                     </div>
                     <div class="sideCart_items" id="item_6">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_6.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_6.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>Follow Me to Ground</p>
@@ -221,7 +221,7 @@
                     </div>
                     <div class="sideCart_items" id="item_7">
                         <div>
-                            <div><img src="/Books_cover_copy/covers/cover_11.jpeg"></div>
+                            <div><img src="/book/Books_cover_copy/covers/cover_11.jpeg"></div>
                             <div class="sideCart_itemInfo">
                                 <div>
                                     <p>Sin Eater</p>
@@ -260,16 +260,16 @@
                 </div>
     
                 <div class="sideCart_bts">
-                    <a href="/Html/cart_summary.html" class="sideCart_viewCart">View Cart</a>
-                    <a href="/Html/checkout.html" class="sideCart_checkout">Check Out</a>
+                    <a href="/book/Html/cart_summary.html" class="sideCart_viewCart">View Cart</a>
+                    <a href="/book/Html/checkout.html" class="sideCart_checkout">Check Out</a>
                 </div>
     
                 <div class="sideCart_footer">
-                    <img src="/icons/AMEX_Icon.png" alt="American express">
-                    <img src="/icons/VISA_icon.png" alt="Visa">
-                    <img src="/icons/Mastercard_icon.png" alt="Mastercard">
-                    <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
-                    <img src="/icons/Apple_icon.png" alt="Apple pay">
+                    <img src="/book/icons/AMEX_Icon.png" alt="American express">
+                    <img src="/book/icons/VISA_icon.png" alt="Visa">
+                    <img src="/book/icons/Mastercard_icon.png" alt="Mastercard">
+                    <img src="/book/icons/Paypel_Icon.png" alt="Paypal pay">
+                    <img src="/book/icons/Apple_icon.png" alt="Apple pay">
                 </div>
     
             </div>
@@ -302,7 +302,7 @@
             <div class="bookList_scrollContainer">
                 <div class="bookList searchResult_container">
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">The Seep</p>
@@ -310,13 +310,13 @@
                                 <p class="bookList_price">$49.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_1_heart"src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_1_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_1_heart"src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_1_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Prosper's Demon</p>
@@ -324,13 +324,13 @@
                                 <p class="bookList_price">$69.90</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_2_heart" src="/icons/heart_bt.png" onclick="goProductPage()">
-                                <img class="bookList_productBts" id="product_2_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_2_heart" src="/book/icons/heart_bt.png" onclick="goProductPage()">
+                                <img class="bookList_productBts" id="product_2_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">The Book of Art</p>
@@ -338,13 +338,13 @@
                                 <p class="bookList_price">$55.00</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_3_heart" src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_3_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_3_heart" src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_3_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Empty Hearts</p>
@@ -352,13 +352,13 @@
                                 <p class="bookList_price">$79.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_4_heart" src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_4_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_4_heart" src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_4_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Booth</p>
@@ -366,8 +366,8 @@
                                 <p class="bookList_price">$39.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_5_heart" src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_5_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_5_heart" src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_5_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
             <div class="bookList_scrollContainer">
                 <div class="bookList searchResult_container">
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Follow Me to Ground</p>
@@ -387,13 +387,13 @@
                                 <p class="bookList_price">$89.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_6_heart" src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_6_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_6_heart" src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_6_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_11.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_11.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Sin Eater</p>
@@ -401,13 +401,13 @@
                                 <p class="bookList_price">$49.99</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" id="product_7_heart"src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" id="product_7_cart" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" id="product_7_heart"src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" id="product_7_cart" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">The Book of Art</p>
@@ -415,13 +415,13 @@
                                 <p class="bookList_price">$55.00</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Empty Hearts</p>
@@ -429,13 +429,13 @@
                                 <p class="bookList_price">$79.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Booth</p>
@@ -443,8 +443,8 @@
                                 <p class="bookList_price">$39.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
@@ -459,7 +459,7 @@
 
                     
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_1.jpeg" alt="book cover">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">The Seep</p>
@@ -467,13 +467,13 @@
                                 <p class="bookList_price">$49.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts" src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts" src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_2.jpg" alt="book cover">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Prosper's Demon</p>
@@ -481,13 +481,13 @@
                                 <p class="bookList_price">$69.90</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts" src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts" src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_3.jpeg" alt="book cover">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">The Book of Art</p>
@@ -495,13 +495,13 @@
                                 <p class="bookList_price">$55.00</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_4.jpeg" alt="book cover">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Empty Hearts</p>
@@ -509,13 +509,13 @@
                                 <p class="bookList_price">$79.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
                     <div class="product_container">
-                        <img class="bookList_productImg" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover">
+                        <img class="bookList_productImg" src="/book/Books_cover_copy/covers/cover_5.jpeg" alt="book cover">
                         <div class="bookList_background">
                             <div class="bookList_bookInfo">
                                 <p class="bookList_title">Booth</p>
@@ -523,8 +523,8 @@
                                 <p class="bookList_price">$39.95</p>
                             </div>
                             <div class="bookList_bts__container">
-                                <img class="bookList_productBts"  src="/icons/heart_bt.png">
-                                <img class="bookList_productBts"  src="/icons/cart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/heart_bt.png">
+                                <img class="bookList_productBts"  src="/book/icons/cart_bt.png">
                             </div>
                         </div>
                     </div>
@@ -535,7 +535,7 @@
         <div class="product_container_phone computer_remove">
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_1.jpeg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">The Seep</p>
                         <p class="bookList_author_phone">Chana Porter</p>
@@ -543,13 +543,13 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_1_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_1_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_1_heart" src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_1_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_2.jpg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">Prosper's Demon</p>
                         <p class="bookList_author_phone">K.I. Parker</p>
@@ -557,13 +557,13 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_2_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_2_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_2_heart" src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_2_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_3.jpeg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">The Book of Art</p>
                         <p class="bookList_author_phone">Regina Phalange</p>
@@ -571,13 +571,13 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_3_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_3_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_3_heart" src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_3_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_4.jpeg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">Empty Hearts</p>
                         <p class="bookList_author_phone">Juli Zeh</p>
@@ -585,13 +585,13 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_4_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_4_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_4_heart" src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_4_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_5.jpeg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">Booth</p>
                         <p class="bookList_author_phone">Karen Joy Fowler</p>
@@ -599,13 +599,13 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_5_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_5_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_5_heart"src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_5_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
             <div class="bookList_background_phone">
                 <div>
-                    <img class="bookList_productImg_phone" src="/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
+                    <img class="bookList_productImg_phone" src="/book/Books_cover_copy/covers/cover_6.jpeg" alt="book cover" onclick="goProductPage()">
                     <div class="bookList_bookInfo_phone">
                         <p class="bookList_title_phone">Follow Me to Ground</p>
                         <p class="bookList_author_phone">Sue Rainsord</p>
@@ -613,8 +613,8 @@
                     </div>
                 </div>
                 <div class="bookList_bts_container_phone">
-                    <img class="bookList_productBts searchBtns" id="product_6_heart"src="/icons/heart_bt.png">
-                    <img class="bookList_productBts searchBtns" id="product_6_cart_phone" src="/icons/cart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_6_heart"src="/book/icons/heart_bt.png">
+                    <img class="bookList_productBts searchBtns" id="product_6_cart_phone" src="/book/icons/cart_bt.png">
                 </div>
             </div>
 
@@ -635,9 +635,9 @@
                 </div>
             </div>
             <div class="subscribe_imgs">
-                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_1.jpeg">
-                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_3.jpeg">
-                <img class="holdAnimation" src="/Books_cover_copy/covers/cover_9.jpeg">
+                <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_1.jpeg">
+                <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_3.jpeg">
+                <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_9.jpeg">
             </div> 
         </div>
 
@@ -659,8 +659,8 @@
                 <li><a href="">Do not sell my personal information</a></li>
             </ul>
             <div class="socialApps">
-                <img src="/icons/Instagram.png">
-                <img src="/icons/Email.png">
+                <img src="/book/icons/Instagram.png">
+                <img src="/book/icons/Email.png">
             </div>
         </div> 
 
@@ -668,15 +668,15 @@
         <footer>
             <p>© 2023, Books at Manic.</p>
             <div>
-                <img src="/icons/AMEX_Icon.png" alt="American express">
-                <img src="/icons/VISA_icon.png" alt="Visa">
-                <img src="/icons/Mastercard_icon.png" alt="Mastercard">
-                <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
-                <img src="/icons/Apple_icon.png" alt="Apple pay">
+                <img src="/book/icons/AMEX_Icon.png" alt="American express">
+                <img src="/book/icons/VISA_icon.png" alt="Visa">
+                <img src="/book/icons/Mastercard_icon.png" alt="Mastercard">
+                <img src="/book/icons/Paypel_Icon.png" alt="Paypal pay">
+                <img src="/book/icons/Apple_icon.png" alt="Apple pay">
             </div>
 
         </footer>
 </body>
 
-<script src="/Javascript/search_results.js"></script>
+<script src="/book/Javascript/search_results.js"></script>
 </html>

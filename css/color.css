@@ -147,7 +147,6 @@
 
 
 /* side cart ------------------------------------------------- */
-
 .sideCart_itemInfo div p:nth-child(1), .sideCart_itemInfo div + p, .sideCart_quantityContainer, .sideCart_removeBt, 
 .subtotalPrice_container > div:nth-child(1) > p:nth-child(1), .sideCart_quantityContainer ion-icon,
 .sideCart_title p, #cart_close {
@@ -168,14 +167,11 @@
 
 .sideCart_viewCart {
   color: var(--bt--secondary);
-  border: 2px solid var(--bt--secondary);
-  border-radius: var(--bt--radius);
 }
 
 .sideCart_checkout {
   color: white;
   background-color: var(--bt--primary);
-  border-radius: var(--bt--radius);
 }
 
 .sideCart_removeBt:hover {
@@ -252,6 +248,9 @@
 
 /* Cart summary Page ======================================================================= */
 
+.summary_checkout {
+  background-color: var(--background--secondary);
+}
 
 .cartSummary_check {
   background-color: var(--bt--primary);
@@ -301,7 +300,7 @@
   color: var(--important);
 }
 
-.chekcout_form > div p:nth-child(2) a{
+.chekcout_form > div p:nth-child(2) a, .nextStep a{
   color: var(--clickable);
 }
 
@@ -329,7 +328,8 @@
   color: white;
 }
 
-.orderSummary_discountCode button:hover {
+.orderSummary_discountCode button:hover, 
+.nextStep input:hover {
   background-color: var(--bt--primary--hover);
 }
 
@@ -337,7 +337,11 @@
 .payment_creditCard > div:nth-child(2) {
   background-color: var(--background--tertiary);
 }
-
+ 
+.nextStep input {
+  background-color: var(--bt--primary);
+  color: white;
+}
 
 /* Payment success popup ============================================================================================================ */
 .popup_container {
@@ -351,4 +355,8 @@
 .popup_container > div:nth-of-type(1) ion-icon, 
 .popup_container > div:nth-of-type(1) p  {
   color: var(--success);
+}
+
+.popup_container > a {
+  color: var(--clickable);
 }

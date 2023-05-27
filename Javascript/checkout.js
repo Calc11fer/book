@@ -42,11 +42,11 @@ if (cart_items.innerHTML < 1) {
 
 // Click the brand icon to go to the home page
 function goHomePage() {
-    window.location.href = "../index.html"
+    window.location.href = "/book/index.html"
 }
 
 function goProductPage() {
-    window.location.href = "/Html/product_page.html";
+    window.location.href = "/book/Html/product_page.html";
 }
 
 // warn the user when the input is empty
@@ -58,12 +58,12 @@ function toSearchResult() {
 
 // cart_icon and user_icon hover effect 
 function cartClick() {
-    if (cart_icon.getAttribute("src") === "/icons/cart_icon.png") {
-        cart_icon.src = "/icons/cart_icon_clicked.png";
+    if (cart_icon.getAttribute("src") === "/book/icons/cart_icon.png") {
+        cart_icon.src = "/book//icons/cart_icon_clicked.png";
         sideCart.style.display = "block";
     } else {
         sideCart.style.display = "none";
-        cart_icon.src = "/icons/cart_icon.png";
+        cart_icon.src = "/book/icons/cart_icon.png";
     }
 }
 
@@ -71,11 +71,11 @@ cart_icon_container.addEventListener("click", cartClick);
 
 
 user_icon.addEventListener("mouseover", () => {
-    user_icon.src = "/icons/user_icon_hover.png";
+    user_icon.src = "/book/icons/user_icon_hover.png";
 });
 
 user_icon.addEventListener("mouseout", () => {
-    user_icon.src = "/icons/user_icon.png";
+    user_icon.src = "/book/icons/user_icon.png";
 });
 
 

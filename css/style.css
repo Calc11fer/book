@@ -309,7 +309,6 @@
 }
 
 
-
 /* Business information ------------------------------------- */
 .business_container ul {
     list-style: none;
@@ -319,7 +318,9 @@
     cursor: pointer;
 }
 
+
 /* footer ------------------------------------------------ */
+
 
 /* sideCart --------------------------------------------------- */
 .sideCart_removeBt {
@@ -336,12 +337,15 @@
 }
 
 .sideCart_viewCart {
+    border: 2px solid var(--bt--secondary);
     border-radius: var(--bt--radius);
-  }
+}
   
-  .sideCart_checkout {
+.sideCart_checkout {
     border-radius: var(--bt--radius);
-  }
+}
+
+
 
 
   /* Search result Page ============================================================*/
@@ -400,8 +404,16 @@
     border-radius: var(--bg--radius);
 }
 
+.cartSummary_container {
+    border-top: 1px solid var(--tx--secondary);
+}
+
 #checkout_orderNote {
     border: 1px solid var(--tx--tertiary);
+}
+
+.checkout_orderNoteContainer {
+    border-top: 1px solid var(--tx--tertiary);
 }
 
 .cartSummary_shop {
@@ -410,6 +422,10 @@
   
 .summary_checkout {
     border-radius: var(--bg--radius);
+}
+
+.cartSummary_check, .cartSummary_shop {
+    text-decoration: none;
 }
 
 
@@ -439,12 +455,30 @@
     height: 1px;
 }
 
+.nextStep input {
+    border: none;
+    cursor: pointer;
+    border-radius: var(--bg--radius);
+}
+
+.nextStep a {
+    text-decoration: none;
+}
+
 .orderSummary {
     border-radius: var(--bg--radius);
 }
 
 .orderSummary_discountCode {
     margin-top: 2vw;
+}
+
+.orderSummary > p {
+    border-bottom: 1px solid var(--tx--quartus);
+}
+
+.orderSummary_priceInfo {
+    border-top: 1px solid var(--tx--tertiary);
 }
 
 .orderSummary_discountCode button {
@@ -539,4 +573,8 @@
 .popup_container > div:nth-of-type(2) > div:nth-of-type(2),
 .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div {
     border-top: 1px solid var(--tx--tertiary);
+}
+
+.popup_container > a {
+    text-decoration: underline 0.15vw;
 }

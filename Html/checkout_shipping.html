@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
 
-    <link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/color.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/structure.css">
-    <link rel="stylesheet" href="/css/structure_phone.css">
-    
+    <link rel="stylesheet" href="/book/css/root.css">
+    <link rel="stylesheet" href="/book/css/color.css">
+    <link rel="stylesheet" href="/book/css/style.css">
+    <link rel="stylesheet" href="/book/css/structure.css">
+    <link rel="stylesheet" href="/book/css/structure_phone.css">
+
     <!-- Icons & Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,16 +27,16 @@
     <!-- Top bar -->
     <div class="topBar">
         <div class="topBar_container">
-            <img id="brand_icon" src="/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
+            <img id="brand_icon" src="/book/icons/brand_icon.png" alt="Books At Manic" onclick="goHomePage()">
             <ul class="topBar_dropdown">
                 <li class="dropdown_list"><a class="dropdown_bt phone_remove"><span>RECOMMENDATION</span>
                     <ion-icon name="chevron-down-outline"></ion-icon>
                 </a>
                     <ul class="dropdownList_container">
-                        <li><a href="">Popular Now</a></li>
-                        <li><a href="">Best Selling</a></li>
-                        <li><a href="">New Release</a></li>
-                        <li><a href="">Promotions</a></li>
+                        <li><a href="#">Popular Now</a></li>
+                        <li><a href="#">Best Selling</a></li>
+                        <li><a href="#">New Release</a></li>
+                        <li><a href="#">Promotions</a></li>
                     </ul>
                 </li>
                 <li class="dropdown_list"><a class="dropdown_bt"><span>BOOKS</span>
@@ -63,17 +63,17 @@
             </ul>
         </div>
         <div class="topBar_container">
-            <form class="searchBar phone_remove" action="/Html/search_results.html" method="get">
+            <form class="searchBar phone_remove" action="/book/Html/search_results.html" method="get">
                 <input id="search_input" type="search" placeholder="Search..." name="search">
                 <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
             </form>
             <div>
                 <div id="cart_icon_container">
-                    <img id="cart_icon" src="/icons/cart_icon.png"><div id="cart_items">3</div>
+                    <img id="cart_icon" src="/book/icons/cart_icon.png"><div id="cart_items">3</div>
                 </div>
             </div>
             <div>
-                <img id="user_icon" src="/icons/user_icon.png">
+                <img id="user_icon" src="/book/icons/user_icon.png">
             </div> 
             <div class="searchBt_phone" onclick="openSearch()">
                 <ion-icon name="search-outline"></ion-icon></button>
@@ -91,7 +91,7 @@
             <div class="sideCart_items_container" id="sideCart_addItems">
                 <div class="sideCart_items">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
                             <div>
                                 <p>The Memory Police</p>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="sideCart_items">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
                             <div>
                                 <p>Empty Hearts</p>
@@ -135,7 +135,7 @@
                 </div>
                 <div class="sideCart_items">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
                             <div>
                                 <p>Booth</p>
@@ -181,11 +181,11 @@
             </div>
 
             <div class="sideCart_footer">
-                <img src="/icons/AMEX_Icon.png" alt="American express">
-                <img src="/icons/VISA_icon.png" alt="Visa">
-                <img src="/icons/Mastercard_icon.png" alt="Mastercard">
-                <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
-                <img src="/icons/Apple_icon.png" alt="Apple pay">
+                <img src="/book/icons/AMEX_Icon.png" alt="American express">
+                <img src="/book/icons/VISA_icon.png" alt="Visa">
+                <img src="/book/icons/Mastercard_icon.png" alt="Mastercard">
+                <img src="/book/icons/Paypel_Icon.png" alt="Paypal pay">
+                <img src="/book/icons/Apple_icon.png" alt="Apple pay">
             </div>
 
         </div>
@@ -195,7 +195,7 @@
     <div class="searchBar_drop_shadow" id="searchBg_open">
     </div>
     <div class="searchBar_container computer_remove" id="searchBar_open">
-        <form class="searchBar_phone" action="/Html/search_results.html" method="get">
+        <form class="searchBar_phone" action="/book/Html/search_results.html" method="get">
             <input id="search_input" type="text" placeholder="Search..." name="search">
             <button type="submit" onclick="toSearchResult()"><ion-icon name="search-outline"></ion-icon></button>
         </form>
@@ -223,9 +223,9 @@
             <div>
                 <p>Express Checkout</p>
                 <div>
-                    <img src="/icons/Shop_pay.png" alt="Shop Pay payment">
-                    <img src="/icons/Paypal.png" alt="Paypal payment">
-                    <img src="/icons/G_pay.png" alt="Google pay payment">
+                    <img src="/book/icons/Shop_pay.png" alt="Shop Pay payment">
+                    <img src="/book/icons/Paypal.png" alt="Paypal payment">
+                    <img src="/book/icons/G_pay.png" alt="Google pay payment">
                 </div>
             </div>
 
@@ -314,7 +314,7 @@
                     title="Please enter only digits, hyphen and plus sign for your region">
 
                 <div class="nextStep">
-                    <a href="/Html/cart_summary.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to cart summary</a>
+                    <a href="/book/Html/cart_summary.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to cart summary</a>
                     <input type="submit" value="Continue to shipping">
                 </div>
             </form>
@@ -345,7 +345,7 @@
                         <p>$15.00</p>
                     </div>
                     <div class="nextStep">
-                        <a href="/Html/checkout.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
+                        <a href="/book/Html/checkout.html"><ion-icon name="chevron-back-outline"></ion-icon>Return to information</a>
                         <input type="submit" value="Continue to payment">
                     </div>
                 </form>
@@ -357,7 +357,7 @@
             <div class="sideCart_items_container order">
                 <div class="sideCart_items order">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_9.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo">
                             <div>
                                 <p>The Memory Police</p>
@@ -379,7 +379,7 @@
                 </div>
                 <div class="sideCart_items order">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_4.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo order">
                             <div>
                                 <p>Empty Hearts</p>
@@ -401,7 +401,7 @@
                 </div>
                 <div class="sideCart_items order">
                     <div>
-                        <div><img src="/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
+                        <div><img src="/book/Books_cover_copy/covers/cover_5.jpeg" onclick="goProductPage()"></div>
                         <div class="sideCart_itemInfo order">
                             <div>
                                 <p>Booth</p>
@@ -447,7 +447,7 @@
         </div>
         <div class="open_orderSummaryContainer computer_remove">
             <div>
-                <img src="/icons/cart_icon_clickable.png">
+                <img src="/book/icons/cart_icon_clickable.png">
                 <p id="open_orderSummary">Show order summary</p>
                 <ion-icon id="open_icon" name="chevron-down-outline"></ion-icon>
             </div>
@@ -470,9 +470,9 @@
                     </div>
                 </div>
                 <div class="subscribe_imgs">
-                    <img class="holdAnimation" src="/Books_cover_copy/covers/cover_1.jpeg">
-                    <img class="holdAnimation" src="/Books_cover_copy/covers/cover_3.jpeg">
-                    <img class="holdAnimation" src="/Books_cover_copy/covers/cover_9.jpeg">
+                    <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_1.jpeg">
+                    <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_3.jpeg">
+                    <img class="holdAnimation" src="/book/Books_cover_copy/covers/cover_9.jpeg">
                 </div> 
             </div>
     
@@ -494,8 +494,8 @@
                     <li><a href="">Do not sell my personal information</a></li>
                 </ul>
                 <div class="socialApps">
-                    <img src="/icons/Instagram.png">
-                    <img src="/icons/Email.png">
+                    <img src="/book/icons/Instagram.png">
+                    <img src="/book/icons/Email.png">
                 </div>
             </div> 
     
@@ -503,16 +503,16 @@
             <footer>
                 <p>© 2023, Books at Manic.</p>
                 <div>
-                    <img src="/icons/AMEX_Icon.png" alt="American express">
-                    <img src="/icons/VISA_icon.png" alt="Visa">
-                    <img src="/icons/Mastercard_icon.png" alt="Mastercard">
-                    <img src="/icons/Paypel_Icon.png" alt="Paypal pay">
-                    <img src="/icons/Apple_icon.png" alt="Apple pay">
+                    <img src="/book/icons/AMEX_Icon.png" alt="American express">
+                    <img src="/book/icons/VISA_icon.png" alt="Visa">
+                    <img src="/book/icons/Mastercard_icon.png" alt="Mastercard">
+                    <img src="/book/icons/Paypel_Icon.png" alt="Paypal pay">
+                    <img src="/book/icons/Apple_icon.png" alt="Apple pay">
                 </div>
     
             </footer>
 
 
 </body>
-    <script src="/Javascript/checkout.js"></script>
+    <script src="/book/Javascript/checkout.js"></script>
 </html>
