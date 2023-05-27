@@ -1,3 +1,4 @@
+// Get the elements in html
 let cart_icon = document.getElementById("cart_icon");
 let cart_items = document.getElementById("cart_items");
 let user_icon = document.getElementById("user_icon");
@@ -48,25 +49,59 @@ let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
 
-// check first when user load the website second time
+
+
+
+// =================================================================================================================================================
+
+// check the items in the cart first when user load the website
 if (cart_items.innerHTML < 1) {
     cart_items.style.display = "none";
 } else {
     cart_items.style.display = "block";
 }
 
+// Adding the eventListener to the products
+product_1.addEventListener("click", product_1_detect);
+remove_1.addEventListener("click", removeProduct_1);
 
-cart_icon_container.addEventListener("click", cartClick);
+product_2.addEventListener("click", product_2_detect);
+remove_2.addEventListener("click", removeProduct_2);
+
+product_3.addEventListener("click", product_3_detect);
+remove_3.addEventListener("click", removeProduct_3);
+
+product_4.addEventListener("click", product_4_detect);
+remove_4.addEventListener("click", removeProduct_4);
+
+product_5.addEventListener("click", product_5_detect);
+remove_5.addEventListener("click", removeProduct_5);
+
+product_6.addEventListener("click", product_6_detect);
+remove_6.addEventListener("click", removeProduct_6);
+
+product_7.addEventListener("click", product_7_detect);
+remove_7.addEventListener("click", removeProduct_7);
+
+product_8.addEventListener("click", product_8_detect);
+addedToCart.addEventListener("click", product_8_detect);
+remove_8.addEventListener("click", removeProduct_8);
+
+
+// close the drop down cart when user click the cross sign
+sideCart_close.addEventListener("click", close_sideCart);
+function close_sideCart() {
+    sideCart_open.style.display = "none";
+    cart_icon.src = "/book/icons/cart_icon.png";
+}
+
+// adding hover effect to user icon
 user_icon.addEventListener("mouseover", () => {
     user_icon.src = "/book/icons/user_icon_hover.png";
 });
 user_icon.addEventListener("mouseout", () => {
     user_icon.src = "/book/icons/user_icon.png";
 });
-// Controlling the searching area
-searchBg_open.addEventListener("click", closeSearch);
-
-
 
 
 // Click the brand icon to go to the home page
@@ -74,17 +109,39 @@ function goHomePage() {
     window.location.href = "/book/index.html"
 }
 
-
-
-
-// warn the user when the input is empty
+// alert the user when the input is empty
 function toSearchResult() {
     if (search_input === '') {
         alert("input cannot be empty, please try again.");
     }
 }
 
-// cart_icon and user_icon hover effect 
+// count the load time of the page, to prevent the get function get the value in the search when it is null;
+let loadtime = 0;
+window.addEventListener("load", () => {
+    loadtime ++;
+    const searchParams = (new URL(document.location)).searchParams;
+    const search_input = searchParams.get("search");
+
+    if (loadtime > 1) {
+        document.getElementById("searched_input").value = search_input;
+        document.getElementById("searched_input_small").innerHTML = search_input;
+    }
+})
+
+// Controlling the searching background area in phone version
+searchBg_open.addEventListener("click", closeSearch);
+function closeSearch() {
+    searchBar_open.style.display = "none";
+    searchBg_open.style.display = "none";
+}
+function openSearch() {
+    searchBar_open.style.display = "flex";
+    searchBg_open.style.display = "flex";
+}
+
+// For drop down cart, after user clicked the cart icon, the cart will show up
+cart_icon_container.addEventListener("click", cartClick);
 function cartClick() {
     if (cart_icon.getAttribute("src") === "/book/icons/cart_icon.png") {
         cart_icon.src = "/book/icons/cart_icon_clicked.png";
@@ -96,19 +153,9 @@ function cartClick() {
 }
 
 
-function openSearch() {
-    searchBar_open.style.display = "flex";
-    searchBg_open.style.display = "flex";
-}
-
-function closeSearch() {
-    searchBar_open.style.display = "none";
-    searchBg_open.style.display = "none";
-}
 
 
-
-// detect the whether the product has been added or not
+// detect whether to add the product to the cart or remove it
 function product_1_detect() {
     if (product_1.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_1();
@@ -441,56 +488,4 @@ function removeProduct_8() {
 
 
 
-function close_sideCart() {
-    sideCart_open.style.display = "none";
-    cart_icon.src = "/book/icons/cart_icon.png";
-}
-
-
-
-
-
-product_1.addEventListener("click", product_1_detect);
-remove_1.addEventListener("click", removeProduct_1);
-
-product_2.addEventListener("click", product_2_detect);
-remove_2.addEventListener("click", removeProduct_2);
-
-product_3.addEventListener("click", product_3_detect);
-remove_3.addEventListener("click", removeProduct_3);
-
-product_4.addEventListener("click", product_4_detect);
-remove_4.addEventListener("click", removeProduct_4);
-
-product_5.addEventListener("click", product_5_detect);
-remove_5.addEventListener("click", removeProduct_5);
-
-product_6.addEventListener("click", product_6_detect);
-remove_6.addEventListener("click", removeProduct_6);
-
-product_7.addEventListener("click", product_7_detect);
-remove_7.addEventListener("click", removeProduct_7);
-
-product_8.addEventListener("click", product_8_detect);
-addedToCart.addEventListener("click", product_8_detect);
-remove_8.addEventListener("click", removeProduct_8);
-
-
-sideCart_close.addEventListener("click", close_sideCart);
-
-
-
-// Ignore the first load, in order to get errors
-let loadtime = 0;
-
-window.addEventListener("load", () => {
-    loadtime ++;
-    const searchParams = (new URL(document.location)).searchParams;
-    const search_input = searchParams.get("search");
-
-    if (loadtime > 1) {
-        document.getElementById("searched_input").value = search_input;
-        document.getElementById("searched_input_small").innerHTML = search_input;
-    }
-})
 

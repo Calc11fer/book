@@ -1,28 +1,9 @@
+/* The font style ================================================================================================================================================= */
+
 /* The links in top navigation bar, headings and all titles */
 .heading_fg div a:nth-child(1), .topBar_dropdown li a, h2, .sideCart_title p, 
 .cartSummary_heading, .checkout_navbarContainer h2, .popup_container > div:nth-of-type(1) p {
     font-family: var(--font--primary);
-}
-
-.heading_fg div a:nth-child(1) {
-    font-weight:700;
-}
-
-.bookList_author, .subscribe_info > div > button {
-    font-weight: 400;
-}
-
-.bookList_topbar label, .sideCart_title p, .cartSummary_heading, .checkout_navbarContainer h2,
-.orderSummary_priceInfo div:nth-child(3) p:nth-child(1) {
-    font-weight: 450;
-}
-
-.bookList_title, .sideCart_itemInfo div p:nth-child(1),
-.heading_fg div a:nth-child(3), .subtotalPrice_container > div:nth-child(1) > p:nth-child(1), 
-.bookList_bookInfo_phone p:nth-child(1), .productInfo div div p:nth-child(1),
-.productInfo > div:nth-child(2) p:nth-child(1), .checkout_priceInfo > div:nth-child(1) > p:nth-child(1),
-.shipping_info div div span {
-    font-weight: 500;
 }
 
 /* Main font of the website */
@@ -43,7 +24,6 @@
 .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .popup_container > a  {
     font-family: var(--font--secondary);
 }
-
 
 /* books' price, subtotal price and total price */
 .bookList_price, .heading_fg div a:nth-child(2), #cart_items, .sideCart_title span, .sideCart_itemInfo div + p, 
@@ -67,6 +47,27 @@
     font-family: var(--font--quartus);
 }
 
+.heading_fg div a:nth-child(1) {
+    font-weight:700;
+}
+
+.bookList_author, .subscribe_info > div > button {
+    font-weight: 400;
+}
+
+.bookList_topbar label, .sideCart_title p, .cartSummary_heading, .checkout_navbarContainer h2,
+.orderSummary_priceInfo div:nth-child(3) p:nth-child(1) {
+    font-weight: 450;
+}
+
+.bookList_title, .sideCart_itemInfo div p:nth-child(1),
+.heading_fg div a:nth-child(3), .subtotalPrice_container > div:nth-child(1) > p:nth-child(1), 
+.bookList_bookInfo_phone p:nth-child(1), .productInfo div div p:nth-child(1),
+.productInfo > div:nth-child(2) p:nth-child(1), .checkout_priceInfo > div:nth-child(1) > p:nth-child(1),
+.shipping_info div div span {
+    font-weight: 500;
+}
+
 .business_container > div h3 {
     font-weight: normal;
 }
@@ -75,12 +76,13 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     cursor: pointer;
 }
 
+/* for the UI components that are not designed in the work flow */
 .notDesigned {
     cursor: not-allowed;
 }
 
 
-/* main top navigation bar */
+/* main top navigation bar =================================================================================================================================================*/
 .topBar {
     box-shadow: var(--bg--shadow--hover);
 }
@@ -131,7 +133,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 
 
 
-/* Heading ------------------------------------- */
+/* Heading ================================================================================================================================================= */
 #heading_img {
     box-shadow: var(--img--shadow);
 }
@@ -183,7 +185,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 }
 
 
-/* Recommendation ------------------------------------- */
+/* Recommendation ================================================================================================================================================= */
 .bookList_topbar {
     border-radius: var(--bg--radius);
 }
@@ -220,7 +222,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 
 
 
-/* Subscribe ------------------------------------- */
+/* Subscribe ================================================================================================================================================= */
 #subscribe_email {
     outline: none;
     border: none;
@@ -230,7 +232,6 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 .subscribe_info button {
     border: none;
     border-radius: calc(var(--bt--radius)*0.5);
-    cursor: pointer;
 }
 
 .subscribe_info button:hover {
@@ -309,7 +310,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 }
 
 
-/* Business information ------------------------------------- */
+/* Business information ================================================================================================================================================= */
 .business_container ul {
     list-style: none;
 }
@@ -319,10 +320,10 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 }
 
 
-/* footer ------------------------------------------------ */
+/* footer ================================================================================================================================================= */
 
 
-/* sideCart --------------------------------------------------- */
+/* sideCart ================================================================================================================================================= */
 .sideCart_removeBt {
     text-decoration: underline;
     cursor: pointer;
@@ -348,7 +349,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 
 
 
-  /* Search result Page ============================================================*/
+  /* Search result Page =================================================================================================================================================================*/
   #searched_input {
     border: none;
     outline-color: var(--bt--primary);
@@ -369,7 +370,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 }
   
   
-/* Product Page ======================================================================= */
+/* Product Page =================================================================================================================================================================================== */
 .product1_container {
     border-radius: var(--bg--radius);
 }
@@ -398,7 +399,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     text-decoration: underline;
 } 
   
-/* Cart summary Page ======================================================================= */
+/* Cart summary Page ================================================================================================================================================================================================== */
   
 .cartSummary_check, .cartSummary_shop, #checkout_orderNote {
     border-radius: var(--bg--radius);
@@ -429,7 +430,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 }
 
 
-/* Checkout Page ======================================================================= */
+/* Checkout Page =================================================================================================================================================================================================== */
 
 .checkout_navbarContainer {
     border-bottom: 1px solid var(--tx--tertiary);
@@ -550,7 +551,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     border-radius: 0 0 var(--bg--radius) var(--bg--radius);
 }
 
-/* Payment success popup ============================================================================================================ */
+/* Payment success popup ============================================================================================================================================================================================= */
 
 #popup_dropShadow {
     backdrop-filter: brightness(70%);

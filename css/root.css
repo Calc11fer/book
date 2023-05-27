@@ -64,6 +64,8 @@
     --bt--shadow--hover: 1px 2px 0.1em rgba(0, 0, 0, 0.200);
 }
 
+
+/* The root variables in phone version */
 @media screen and (max-width: 700px) {
     :root {
         /* Basic*/
@@ -134,6 +136,8 @@
 }
   
 
+
+/* General settings */
 html {
     box-sizing: border-box;
 }

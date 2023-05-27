@@ -1,6 +1,6 @@
 /* Homepage ================================================================================================================== */
 
-/* Top bar */
+/* Main navigation bar */
 @media screen and (max-width: 600px)  {
     .topBar_container:nth-child(2) {
         margin-right: 0;
@@ -712,6 +712,7 @@
 }
 
 
+
 /* Search result Page ============================================================================================================== */
 @media screen and (max-width: 600px) {
     .searched_container {
@@ -810,6 +811,7 @@
         margin: 3vw
     }
 }
+
 
 
 /* Product Page ==================================================================================================================================== */
@@ -1347,6 +1349,8 @@
         margin-bottom: 2vw;
     }
 }
+
+
 
 /* For "checkout shipping method" under checkout page */
 @media screen and (max-width: 600px) {

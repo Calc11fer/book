@@ -50,7 +50,10 @@ const product_4_phone = document.getElementById("product_4_cart_phone");
 const product_5_phone = document.getElementById("product_5_cart_phone");
 const product_6_phone = document.getElementById("product_6_cart_phone");
 
+// =================================================================================================================================================
 
+
+// Adding eventListener to products
 product_1.addEventListener("click", product_1_detect);
 product_1_phone.addEventListener("click", product_1_detect);
 remove_1.addEventListener("click", removeProduct_1);
@@ -78,17 +81,6 @@ remove_6.addEventListener("click", removeProduct_6);
 product_7.addEventListener("click", product_7_detect);
 remove_7.addEventListener("click", removeProduct_7);
 
-sideCart_close.addEventListener("click", close_sideCart);
-
-
-
-window.addEventListener("load", () => {
-    const searchParams = (new URL(document.location)).searchParams;
-    const search_input = searchParams.get("search");
-
-    document.getElementById("searched_input").value = search_input;
-    document.getElementById("searched_input_small").innerHTML = search_input;
-})
 
 
 function goProductPage() {
@@ -99,14 +91,37 @@ function goHomePage() {
     window.location.href = "/book/index.html"
 }
 
-// warn the user when the input is empty
+// alert the user when the search input is empty
 function toSearchResult() {
     if (search_input === '') {
         alert("input cannot be empty, please try again.");
     }
 }
 
-// cart_icon and user_icon hover effect 
+// count the load time of the page, to prevent the get function get the value in the search when it is null;
+window.addEventListener("load", () => {
+    const searchParams = (new URL(document.location)).searchParams;
+    const search_input = searchParams.get("search");
+
+    document.getElementById("searched_input").value = search_input;
+    document.getElementById("searched_input_small").innerHTML = search_input;
+})
+
+// Controlling the searching background area in phone version
+searchBg_open.addEventListener("click", closeSearch);
+function closeSearch() {
+    searchBar_open.style.display = "none";
+    searchBg_open.style.display = "none";
+}
+
+function openSearch() {
+    searchBar_open.style.display = "flex";
+    searchBg_open.style.display = "flex";
+}
+
+
+// For drop down cart, after user clicked the cart icon, the cart will show up
+cart_icon_container.addEventListener("click", cartClick);
 function cartClick() {
     if (cart_icon.getAttribute("src") === "/book/icons/cart_icon.png") {
         cart_icon.src = "/book/icons/cart_icon_clicked.png";
@@ -117,9 +132,14 @@ function cartClick() {
     }
 }
 
-cart_icon_container.addEventListener("click", cartClick);
+sideCart_close.addEventListener("click", close_sideCart);
+function close_sideCart() {
+    sideCart_open.style.display = "none";
+    cart_icon.src = "/book/icons/cart_icon.png";
+}
 
 
+// user icon hover effect
 user_icon.addEventListener("mouseover", () => {
     user_icon.src = "/book/icons/user_icon_hover.png";
 });
@@ -129,28 +149,15 @@ user_icon.addEventListener("mouseout", () => {
 });
 
 
-// Controlling the searching area
-searchBg_open.addEventListener("click", closeSearch);
-
-function openSearch() {
-    searchBar_open.style.display = "flex";
-    searchBg_open.style.display = "flex";
-}
-
-function closeSearch() {
-    searchBar_open.style.display = "none";
-    searchBg_open.style.display = "none";
-}
-
-
-// check first when user load the website second time
+// check the items in the cart first when user load the website
 if (cart_items.innerHTML < 1) {
     cart_items.style.display = "none";
 } else {
     cart_items.style.display = "block";
 }
 
-// detect the whether the product has been added or not
+
+// detect whether to add the product to the cart or remove it
 function product_1_detect() {
     if (product_1.getAttribute("src") === "/book/icons/cart_bt.png") {
         addProduct_1();
@@ -445,12 +452,6 @@ function removeProduct_7() {
     } else {
         cart_items.style.display = "block";
     }
-}
-
-
-function close_sideCart() {
-    sideCart_open.style.display = "none";
-    cart_icon.src = "/book/icons/cart_icon.png";
 }
 
 
