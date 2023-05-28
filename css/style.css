@@ -352,6 +352,7 @@ img, input[type="radio"], input[type="checkbox"], a, button{
   /* Search result Page =================================================================================================================================================================*/
   #searched_input {
     border: none;
+    border-radius: var(--bg--radius);
     outline-color: var(--bt--primary);
   }
 
