@@ -155,7 +155,7 @@
 .sideCart_itemInfo div p:nth-child(2), 
 .subtotalPrice_container > div:nth-child(1) > p:nth-child(2), 
 .subtotalPrice_container > div:nth-child(2) > p:nth-child(2),
-.subtotalPrice_container > div:nth-child(1) > p:nth-child(2) span  {
+.subtotalPrice_container > div:nth-child(1) > p:nth-child(2) span {
   color: var(--tx--tertiary);
 }
 
@@ -320,7 +320,8 @@
 
 .navbar_links, .orderSummary_priceInfo div:nth-last-child(n+2) p, .orderSummary_priceInfo > p,
 .shipping_info div div p:nth-child(2), #shipping_express, #final_shipAddress, #estDate, .recipt_container div p,
-.checkout > div:nth-child(1) p, .checkout > div:nth-child(2) span {
+.checkout > div:nth-child(1) p, .checkout > div:nth-child(2) span,
+.chekcout_form label:nth-child(n+1) {
   color: var(--tx--tertiary);
 }
 
