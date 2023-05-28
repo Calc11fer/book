@@ -181,6 +181,14 @@
   color: var(--clickable);
 }
 
+.sideCart_items, .sideCart {
+  background-color: white;
+}
+
+.sideCart_quantityContainer span span, .orderNote_container{
+  background-color: var(--background--tertiary);
+}
+
 
 
 /* Search result Page =======================================================================================================================================================================================*/

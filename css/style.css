@@ -324,6 +324,11 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 
 
 /* sideCart ================================================================================================================================================= */
+.sideCart {
+    border-radius: 0 0 var(--bg--radius) var(--bg--radius);
+    box-shadow: var(--bg--shadow--hover);
+}
+
 .sideCart_removeBt {
     text-decoration: underline;
     cursor: pointer;
@@ -333,8 +338,21 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     cursor: pointer;
 }
 
+.sideCart_items_container, .orderNote_container {
+    border-radius: var(--bg--radius);
+}
+
+.sideCart_items {
+    border: 1.5px solid var(--tx--quinary);
+    border-radius: var(--bg--radius);
+}
+
 #item_1, #item_2, #item_3, #item_4, #item_5, #item_6, #item_7, #item_8 {
     display: none;
+}
+
+.sideCart_title {
+    border-bottom: 1.5px solid var(--tx--quinary);
 }
 
 .sideCart_viewCart {
@@ -345,7 +363,15 @@ img, input[type="radio"], input[type="checkbox"], a, button{
 .sideCart_checkout {
     border-radius: var(--bt--radius);
 }
+.sideCart_quantityContainer span span{
+    border-radius: 0.26vw;
+}
 
+.orderNote_container input {
+    outline: none;
+    border: 1px solid var(--tx--quinary);
+    border-radius: var(--bg--radius);
+}
 
 
 

@@ -513,9 +513,6 @@ footer div img {
     display: none;
     position: absolute;
     right: 0%;
-    background-color: white;
-    border-radius: 0 0 var(--bg--radius) var(--bg--radius);
-    box-shadow: var(--bg--shadow--hover);
     max-width: 80%;
     max-height: 700px;
     overflow-y: scroll;
@@ -532,7 +529,6 @@ footer div img {
 }
 
 .sideCart_title {
-    border-bottom: 1.5px solid var(--tx--quinary);
     padding: var(--sideCart--padding) 0px;
 }
 
@@ -551,7 +547,6 @@ footer div img {
     display: grid;
     gap: var(--sideCart--padding);
     align-items: center;
-    border-radius: var(--bg--radius);
     padding: 0.8vw;
 }
 
@@ -560,9 +555,6 @@ footer div img {
 }
 
 .sideCart_items {
-    background-color: white;
-    border: 1.5px solid var(--tx--quinary);
-    border-radius: var(--bg--radius);
     padding: var(--sideCart--padding);
     align-items: center;
 }
@@ -573,8 +565,8 @@ footer div img {
 }
 
 .sideCart_items div img {
-    height: calc(var(--img--height));
-    width: calc(var(--img--width));
+    height: calc(var(--img--height)*0.8);
+    width: calc(var(--img--width)*0.8);
 }
 
 .sideCart_itemInfo {
@@ -638,15 +630,11 @@ footer div img {
     padding: 1px 0.9vw;
     margin: 0 0.2vw;
     font-size: calc(var(--_size));
-    background-color: var(--background--tertiary);
-    border-radius: 0.26vw;
 }
 
 .orderNote_container {
-    background-color: var(--background--tertiary);
     margin-top: var(--sideCart--padding);
     padding: var(--sideCart--padding);
-    border-radius: var(--bg--radius);
 }
 
 .orderNote_container label{
@@ -655,9 +643,6 @@ footer div img {
 }
 
 .orderNote_container input {
-    outline: none;
-    border: 1px solid var(--tx--quinary);
-    border-radius: var(--bg--radius);
     height: 6vw;
     width: 100%;
     padding: 0.8vw;
