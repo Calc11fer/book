@@ -173,6 +173,10 @@
   background-color: var(--bt--primary);
 }
 
+.sideCart_checkout:hover {
+  background-color: var(--bt--primary--hover);
+}
+
 .sideCart_removeBt:hover {
   color: var(--clickable);
 }
@@ -185,10 +189,13 @@
   background-color: white;
 }
 
-.sideCart_quantityContainer span span, .orderNote_container{
+.sideCart_quantityContainer span span, .orderNote_container, .subtotalPrice_container{
   background-color: var(--background--tertiary);
 }
 
+.sideCart_viewCart:hover {
+  background-color: var(--background--secondary);
+}
 
 
 /* Search result Page =======================================================================================================================================================================================*/

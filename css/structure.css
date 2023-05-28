@@ -595,7 +595,7 @@ footer div img {
 }
 
 .sideCart_items > div:nth-child(2) {
-    height: 12vw;
+    height: 9vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -650,10 +650,8 @@ footer div img {
 
 .subtotalPrice_container {
     justify-content: space-between;
-    background-color: var(--background--tertiary);
     margin-top: var(--sideCart--padding);
     padding: var(--sideCart--padding);
-    border-radius: var(--bg--radius);
 }
 
 .subtotalPrice_container > div:nth-child(1) > p:nth-child(1), 
@@ -684,32 +682,21 @@ footer div img {
     margin: calc(var(--sideCart--padding)*2) 0;
 }
 
-.sideCart_bts a{
-    text-decoration: none;
-    font-family: var(--font--secondary);
+.sideCart_bts a {
     font-size: calc(var(--_size)*1.2);
     height: 4.4vw;
     width: 13.8vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 .sideCart_viewCart {
     margin-right: 0.75vw;
 }
-
-.sideCart_viewCart:hover {
-    background-color: var(--background--secondary);
-}
   
 .sideCart_checkout {
     margin-left: 0.75vw;
-}
-
-.sideCart_checkout:hover {
-    background-color: var(--bt--primary--hover);
 }
 
 .sideCart_footer {
