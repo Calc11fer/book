@@ -185,7 +185,7 @@
 
 /* Search result Page =======================================================================================================================================================================================*/
 .searched_container > div > div:nth-child(2) button {
-  background-color: var(--background--tertiary);
+  background-color: var(--background--secondary);
 }
 
 .searched_container {

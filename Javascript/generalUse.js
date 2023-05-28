@@ -71,8 +71,10 @@ if (cart_items.innerHTML < 1) {
 
 // count the load time of the page, to prevent the get function get the value in the search when it is null;
 let loadtime = 0;
+// then get the search input value and add it to the result
 window.addEventListener("load", () => {
     loadtime ++;
+    console.log(loadtime);
     const searchParams = (new URL(document.location)).searchParams;
     const search_input = searchParams.get("search");
 
