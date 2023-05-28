@@ -19,7 +19,7 @@
 .orderSummary_priceInfo > div:nth-child(1) > p:nth-child(1), .orderSummary_priceInfo > div:nth-child(2) > p, .orderSummary_priceInfo > div:nth-child(3) > p:nth-child(1),
 .checkout > div:nth-child(2) span,.nextStep input, .open_orderSummaryContainer p, .shipping_info div div p:nth-child(1), .shipping_info div div p:nth-child(3),
 .shipping_info div a, .shipping_method > p, #shipping_form > div:nth-child(1) div div label, #shipping_form > div:nth-child(1) div p,
-.payment_creditCard > div:nth-child(1) div label, .payment_paypal label, .payment_pOrder label, .sideCart_bts a
+.payment_creditCard > div:nth-child(1) div label, .payment_paypal label, .payment_pOrder label, .sideCart_bts a,
 #payment > p:nth-child(1), #payment > p:nth-of-type(3), .nextStep a, .popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
 .popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .popup_container > a  {
     font-family: var(--font--secondary);
