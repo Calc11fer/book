@@ -25,6 +25,20 @@ let open_icon = document.getElementById("open_icon");
 let orderSummary_opened = document.getElementById("orderSummary_opened");
 // =================================================================================================================================================
 
+// This variable is used for jumping over the first load on current page, so that we can record the search input
+// and pass it to the result page
+let loadtime = 0;
+window.addEventListener("load", () => {
+    loadtime ++;
+    const searchParams = (new URL(document.location)).searchParams;
+    const search_input = searchParams.get("search");
+
+    if (loadtime > 1) {
+        document.getElementById("searched_input").value = search_input;
+        document.getElementById("searched_input_small").innerHTML = search_input;
+    }
+});
+
 // Hide the order summary in phone version
 open_orderSummary.addEventListener("click", () => {
 

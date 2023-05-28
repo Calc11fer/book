@@ -37,6 +37,20 @@ let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal")
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
 // =================================================================================================================================================
 
+// This variable is used for jumping over the first load on current page, so that we can record the search input
+// and pass it to the result page
+let loadtime = 0;
+window.addEventListener("load", () => {
+    loadtime ++;
+    const searchParams = (new URL(document.location)).searchParams;
+    const search_input = searchParams.get("search");
+
+    if (loadtime > 1) {
+        document.getElementById("searched_input").value = search_input;
+        document.getElementById("searched_input_small").innerHTML = search_input;
+    }
+});
+
 // Adding the eventListener to the products
 product_1.addEventListener("click", product_1_detect);
 remove_1.addEventListener("click", removeProduct_1);

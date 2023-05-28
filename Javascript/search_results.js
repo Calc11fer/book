@@ -41,6 +41,16 @@ const product_6_phone = document.getElementById("product_6_cart_phone");
 // =================================================================================================================================================
 
 
+// get the search input value from other page and add it to the search result
+window.addEventListener("load", () => {
+    const searchParams = (new URL(document.location)).searchParams;
+    const search_input = searchParams.get("search");
+
+    document.getElementById("searched_input").value = search_input;
+    document.getElementById("searched_input_small").innerHTML = search_input;
+});
+
+
 // Adding eventListener to products
 product_1.addEventListener("click", product_1_detect);
 product_1_phone.addEventListener("click", product_1_detect);

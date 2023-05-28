@@ -68,19 +68,3 @@ if (cart_items.innerHTML < 1) {
 } else {
     cart_items.style.display = "block";
 }
-
-
-let loadtime = 0;
-// then get the search input value and add it to the result
-window.addEventListener("load", () => {
-    loadtime ++;
-    console.log(loadtime);
-    const searchParams = (new URL(document.location)).searchParams;
-    const search_input = searchParams.get("search");
-    console.log(search_input);
-
-    if (loadtime > 1) {
-        document.getElementById("searched_input").value = search_input;
-        document.getElementById("searched_input_small").innerHTML = search_input;
-    }
-});
