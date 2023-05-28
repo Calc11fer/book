@@ -575,13 +575,17 @@ footer div img {
     justify-content: space-between;
 }
 
+.sideCart_itemInfo > p {
+    font-size: calc(var(--_size));
+}
+
 .sideCart_itemInfo div {
     float: left;
 }
 
 .sideCart_itemInfo div p:nth-child(1) {
     width: var(--bookTitle--width);
-    font-size: calc(var(--_size)*1.3);
+    font-size: calc(var(--_size)*1.1);
 }
 
 .sideCart_itemInfo div p:nth-child(2) {
@@ -1238,12 +1242,12 @@ footer div img {
 }
 
 .sideCart_items.order {
-    height: 12vw;
+    height: 9vw;
 }
 
 .sideCart_items.order div div img {
-    height: 10vw;
-    width: 6.5vw;
+    height: 7vw;
+    width: 4.5vw;
 }
 
 .sideCart_quantityContainer.order {
