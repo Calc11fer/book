@@ -1,11 +1,3 @@
-let cart_icon = document.getElementById("cart_icon");
-let cart_items = document.getElementById("cart_items");
-let user_icon = document.getElementById("user_icon");
-let cart_icon_container = document.getElementById("cart_icon_container");
-let sideCart = document.getElementById("sideCart-open");
-let searchBar_open = document.getElementById("searchBar_open");
-let searchBg_open = document.getElementById("searchBg_open");
-
 const product_1 = document.getElementById("product_1_cart");
 const item_1 = document.getElementById("item_1");
 const remove_1 = document.getElementById("remove_1");
@@ -35,9 +27,6 @@ const item_7 = document.getElementById("item_7");
 const remove_7 = document.getElementById("remove_7");
 
 const books_price = document.getElementsByClassName("bookList_price");
-const sideCart_close = document.getElementById("cart_close");
-const sideCart_open = document.getElementById("sideCart-open");
-
 let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
@@ -49,7 +38,6 @@ const product_3_phone = document.getElementById("product_3_cart_phone");
 const product_4_phone = document.getElementById("product_4_cart_phone");
 const product_5_phone = document.getElementById("product_5_cart_phone");
 const product_6_phone = document.getElementById("product_6_cart_phone");
-
 // =================================================================================================================================================
 
 
@@ -81,80 +69,6 @@ remove_6.addEventListener("click", removeProduct_6);
 product_7.addEventListener("click", product_7_detect);
 remove_7.addEventListener("click", removeProduct_7);
 
-
-
-function goProductPage() {
-    window.location.href = "/book/Html/product_page.html";
-}
-
-function goHomePage() {
-    window.location.href = "/book/index.html"
-}
-
-// alert the user when the search input is empty
-function toSearchResult() {
-    if (search_input === '') {
-        alert("input cannot be empty, please try again.");
-    }
-}
-
-// count the load time of the page, to prevent the get function get the value in the search when it is null;
-window.addEventListener("load", () => {
-    const searchParams = (new URL(document.location)).searchParams;
-    const search_input = searchParams.get("search");
-
-    document.getElementById("searched_input").value = search_input;
-    document.getElementById("searched_input_small").innerHTML = search_input;
-})
-
-// Controlling the searching background area in phone version
-searchBg_open.addEventListener("click", closeSearch);
-function closeSearch() {
-    searchBar_open.style.display = "none";
-    searchBg_open.style.display = "none";
-}
-
-function openSearch() {
-    searchBar_open.style.display = "flex";
-    searchBg_open.style.display = "flex";
-}
-
-
-// For drop down cart, after user clicked the cart icon, the cart will show up
-cart_icon_container.addEventListener("click", cartClick);
-function cartClick() {
-    if (cart_icon.getAttribute("src") === "/book/icons/cart_icon.png") {
-        cart_icon.src = "/book/icons/cart_icon_clicked.png";
-        sideCart.style.display = "block";
-    } else {
-        sideCart.style.display = "none";
-        cart_icon.src = "/book/icons/cart_icon.png";
-    }
-}
-
-sideCart_close.addEventListener("click", close_sideCart);
-function close_sideCart() {
-    sideCart_open.style.display = "none";
-    cart_icon.src = "/book/icons/cart_icon.png";
-}
-
-
-// user icon hover effect
-user_icon.addEventListener("mouseover", () => {
-    user_icon.src = "/book/icons/user_icon_hover.png";
-});
-
-user_icon.addEventListener("mouseout", () => {
-    user_icon.src = "/book/icons/user_icon.png";
-});
-
-
-// check the items in the cart first when user load the website
-if (cart_items.innerHTML < 1) {
-    cart_items.style.display = "none";
-} else {
-    cart_items.style.display = "block";
-}
 
 
 // detect whether to add the product to the cart or remove it

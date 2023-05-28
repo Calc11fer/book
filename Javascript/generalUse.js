@@ -8,7 +8,6 @@ let searchBg_open = document.getElementById("searchBg_open");
 const sideCart_close = document.getElementById("cart_close");
 const sideCart_open = document.getElementById("sideCart-open");
 
-// =================================================================================================================================================
 // go to product page
 function goProductPage() {
     window.location.href = "/book/Html/product_page.html";
@@ -82,4 +81,3 @@ window.addEventListener("load", () => {
         document.getElementById("searched_input_small").innerHTML = search_input;
     }
 });
-
