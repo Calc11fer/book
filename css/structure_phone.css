@@ -164,6 +164,7 @@
     .searchBar_phone input {
         border: none;
         outline: none;
+        border-radius: calc(var(--bg--radius)) 0 0 calc(var(--bg--radius));
         background: transparent;
     }
     
