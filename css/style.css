@@ -132,6 +132,9 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     border-radius: 50%;
 }
 
+.computer_remove.beBold {
+    font-weight: 500;
+}
 
 
 /* Heading ================================================================================================================================================= */
