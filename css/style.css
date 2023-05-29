@@ -47,7 +47,7 @@
     font-family: var(--font--quartus);
 }
 
-.heading_fg div a:nth-child(1) {
+.heading_fg div a:nth-child(1), .computer_remove.beBold a {
     font-weight:700;
 }
 
@@ -132,9 +132,6 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     border-radius: 50%;
 }
 
-.computer_remove.beBold a {
-    font-weight: 500;
-}
 
 
 /* Heading ================================================================================================================================================= */
