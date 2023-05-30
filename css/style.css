@@ -348,10 +348,6 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     border-radius: var(--bg--radius);
 }
 
-#item_1, #item_2, #item_3, #item_4, #item_5, #item_6, #item_7, #item_8 {
-    display: none;
-}
-
 .sideCart_title {
     border-bottom: 1.5px solid var(--tx--quinary);
 }
