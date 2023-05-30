@@ -31,50 +31,27 @@ const product_8 = document.getElementById("product_8_cart");
 const item_8 = document.getElementById("item_8");
 const remove_8 = document.getElementById("remove_8");
 
-// const product_9 = document.getElementById("product_9_cart");
-// const item_9 = document.getElementById("item_9");
-// const remove_9 = document.getElementById("remove_9");
+const product_9 = document.getElementById("product_9_cart");
+const item_9 = document.getElementById("item_9");
+const remove_9 = document.getElementById("remove_9");
+
+const product_10 = document.getElementById("product_10_cart");
+const item_10 = document.getElementById("item_10");
+const remove_10 = document.getElementById("remove_10");
+
+const product_11 = document.getElementById("product_11_cart");
+const item_11 = document.getElementById("item_11");
+const remove_11 = document.getElementById("remove_11");
+
+const product_12 = document.getElementById("product_12_cart");
+const item_12 = document.getElementById("item_12");
+const remove_12 = document.getElementById("remove_12");
+
 
 const books_price = document.getElementsByClassName("bookList_price");
 let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
-let decreaseQty = document.getElementsByClassName("decreaseQty");
-let increaseQty = document.getElementsByClassName("increaseQty");
-let itemQty = document.getElementsByClassName("itemQty");
-
-for (i=0; i<decreaseQty.length; i++) {
-    console.log(i);
-    decreaseQty[i].addEventListener("click", () => {
-        console.log(i);
-        itemQty[i].innerHTML--;
-    });
-    increaseQty[i].addEventListener("click", () => {
-        console.log(i);
-        itemQty[i].innerHTML++;
-    });
-}
-
-// function decrease(x) {
-//     console.log(x);
-//     itemQty[x].innerHTML--;
-// }
-
-// function increase(x) {
-//     itemQty[x].innerHTML++;
-// }
-
-function addProduct(x) {
-    cart_items.innerHTML++;
-    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-
-    // calculating the subtotal price
-    subtotalPrice += parseFloat(books_price[x].innerHTML.slice(1));
-    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    product[x].src = "/book/icons/cart_bt_clicked.png";
-    itemInCart[x].style.display = "flex";
-}
-
 // =================================================================================================================================================
 
 // This variable is used for jumping over the first load on current page, so that we can record the search input
@@ -115,50 +92,17 @@ remove_7.addEventListener("click", removeProduct_7);
 product_8.addEventListener("click", product_8_detect);
 remove_8.addEventListener("click", removeProduct_8);
 
-// detect whether to add the product to the cart or remove it
-function product_8_detect() {
-    if (product_8.getAttribute("src") === "/book/icons/cart_bt.png") {
-        addProduct_8();
-    } else {
-        removeProduct_8();
-    }
+product_9.addEventListener("click", product_9_detect);
+remove_9.addEventListener("click", removeProduct_9);
 
-    // check is there an item in the cart, if not, hide the item number
-    if (cart_items.innerHTML < 1) {
-        cart_items.style.display = "none";
-    } else {
-        cart_items.style.display = "block";
-    }
-}
+product_10.addEventListener("click", product_10_detect);
+remove_10.addEventListener("click", removeProduct_10);
 
-function addProduct_8() {
-    cart_items.innerHTML++;
-    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+product_11.addEventListener("click", product_11_detect);
+remove_11.addEventListener("click", removeProduct_11);
 
-    // calculating the subtotal price
-    subtotalPrice += parseFloat(books_price[7].innerHTML.slice(1));
-    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-
-    product_8.src = "/book/icons/cart_bt_clicked.png";
-    item_8.style.display = "flex";
-}
-
-function removeProduct_8() {
-    cart_items.innerHTML--;
-    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
-    subtotalPrice -= parseFloat(books_price[7].innerHTML.slice(1));
-    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
-    
-    product_8.src = "/book/icons/cart_bt.png";
-    item_8.style.display = "none";
-
-    // double checking whether the cart is empty or not
-    if (cart_items.innerHTML < 1) {
-        cart_items.style.display = "none";
-    } else {
-        cart_items.style.display = "block";
-    }
-}
+product_12.addEventListener("click", product_12_detect);
+remove_12.addEventListener("click", removeProduct_12);
 
 
 // detect whether to add the product to the cart or remove it
@@ -435,6 +379,226 @@ function removeProduct_7() {
     product_7.src = "/book/icons/cart_bt.png";
     item_7.style.display = "none";
 
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function product_8_detect() {
+    if (product_8.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_8();
+    } else {
+        removeProduct_8();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_8() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[7].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_8.src = "/book/icons/cart_bt_clicked.png";
+    item_8.style.display = "flex";
+}
+
+function removeProduct_8() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[7].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_8.src = "/book/icons/cart_bt.png";
+    item_8.style.display = "none";
+
+    // double checking whether the cart is empty or not
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function product_9_detect() {
+    if (product_9.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_9();
+    } else {
+        removeProduct_9();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_9() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[8].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_9.src = "/book/icons/cart_bt_clicked.png";
+    item_9.style.display = "flex";
+}
+
+function removeProduct_9() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[8].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_9.src = "/book/icons/cart_bt.png";
+    item_9.style.display = "none";
+
+    // double checking whether the cart is empty or not
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function product_10_detect() {
+    if (product_10.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_10();
+    } else {
+        removeProduct_10();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_10() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[9].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_10.src = "/book/icons/cart_bt_clicked.png";
+    item_10.style.display = "flex";
+}
+
+function removeProduct_10() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[9].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_10.src = "/book/icons/cart_bt.png";
+    item_10.style.display = "none";
+
+    // double checking whether the cart is empty or not
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function product_11_detect() {
+    if (product_11.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_11();
+    } else {
+        removeProduct_11();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_11() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[10].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_11.src = "/book/icons/cart_bt_clicked.png";
+    item_11.style.display = "flex";
+}
+
+function removeProduct_11() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[10].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_11.src = "/book/icons/cart_bt.png";
+    item_11.style.display = "none";
+
+    // double checking whether the cart is empty or not
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function product_12_detect() {
+    if (product_12.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_12();
+    } else {
+        removeProduct_12();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_12() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[11].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_12.src = "/book/icons/cart_bt_clicked.png";
+    item_12.style.display = "flex";
+}
+
+function removeProduct_12() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[11].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_12.src = "/book/icons/cart_bt.png";
+    item_12.style.display = "none";
+
+    // double checking whether the cart is empty or not
     if (cart_items.innerHTML < 1) {
         cart_items.style.display = "none";
     } else {
