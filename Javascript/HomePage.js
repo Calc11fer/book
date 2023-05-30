@@ -46,15 +46,29 @@ let itemQty = document.getElementsByClassName("itemQty");
 for (i=0; i<decreaseQty.length; i++) {
     decreaseQty[i].addEventListener("click", decrease(i));
     increaseQty[i].addEventListener("click", increase(i));
+    console.log(i);
 }
 
 function decrease(x) {
+    console.log(x);
     itemQty[x].innerHTML--;
 }
 
 function increase(x) {
     itemQty[x].innerHTML++;
 }
+
+function addProduct(x) {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[x].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    product[x].src = "/book/icons/cart_bt_clicked.png";
+    itemInCart[x].style.display = "flex";
+}
+
 // =================================================================================================================================================
 
 // This variable is used for jumping over the first load on current page, so that we can record the search input
