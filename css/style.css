@@ -396,6 +396,26 @@ img, input[type="radio"], input[type="checkbox"], a, button{
     text-decoration: underline 0.15vw;
     cursor: pointer;
 }
+
+.changeResults > div p {
+    cursor: pointer;
+}
+
+.changeResults > div:nth-of-type(1), .changeResults > div:nth-of-type(3) {
+    border-bottom: 1px solid black;
+}
+
+.changeResults > div:nth-of-type(2) a:nth-of-type(1) {
+    border-bottom: 1px solid black;
+}
+
+.changeResults > div:nth-of-type(2) a:nth-of-type(1):hover {
+    border-bottom: 1px solid var(--clickable);
+}
+
+.clickable_text.phoneVersion {
+    display: none;
+}
   
   
 /* Product Page =================================================================================================================================================================================== */

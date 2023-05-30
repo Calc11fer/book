@@ -808,32 +808,9 @@ footer div img {
     font-size: calc(var(--_size)*1.1);
 }
 
-.changeResults > div:nth-of-type(2) a:hover, .changeResults > div:nth-of-type(1):hover, .changeResults > div:nth-of-type(3):hover {
-    color: var(--clickable);
-    border-color: var(--clickable);
-}
-
-.changeResults > div p {
-    cursor: pointer;
-}
-
-.changeResults > div:nth-of-type(1), .changeResults > div:nth-of-type(3) {
-    border-bottom: 1px solid black;
-}
-
 .changeResults > div:nth-of-type(2) a {
     padding: 0.5vw;
 }
-
-.changeResults > div:nth-of-type(2) a:nth-of-type(1) {
-    border-bottom: 1px solid black;
-}
-
-.changeResults > div:nth-of-type(2) a:nth-of-type(1):hover {
-    border-bottom: 1px solid var(--clickable);
-}
-
-
 
 /* Product Page ==================================================================================================================================== */
   
