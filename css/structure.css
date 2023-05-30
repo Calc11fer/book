@@ -789,26 +789,32 @@ footer div img {
     margin-top: calc(var(--marginLine)*2.5);
 }
 
-#item_1, #item_2, #item_3, #item_4, #item_5, #item_6, #item_7, #item_8, #item_9, #item_10, #item_11, #item12 {
+#item_1, #item_2, #item_3, #item_4, #item_5, #item_6, #item_7, #item_8, #item_9, #item_10, #item_11, #item_12 {
     display: none;
 }
 
 .changeResults {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    margin: var(--marginLine);
 }
 
-.changeResults > div:nth-of-type(2) {
+.changeResults > div, .changeResults{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.changeResults > div:nth-of-type(2) a:hover, .changeResults > div p:hover {
+    color: var(--clickable);
+}
+
+.changeResults > div {
+    border-bottom: 1px solid black;
 }
 
 .changeResults > div:nth-of-type(2) a:nth-of-type(1) {
     padding-bottom: 0.5vw;
-    border-bottom: 1px;
+    border-bottom: 1px solid black;
 }
 
 

@@ -21,7 +21,7 @@
 .shipping_info div a, .shipping_method > p, #shipping_form > div:nth-child(1) div div label, #shipping_form > div:nth-child(1) div p,
 .payment_creditCard > div:nth-child(1) div label, .payment_paypal label, .payment_pOrder label, .sideCart_bts a,
 #payment > p:nth-child(1), #payment > p:nth-of-type(3), .nextStep a, .popup_container > div:nth-of-type(2) > div:nth-of-type(2) > p, 
-.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .popup_container > a  {
+.popup_container > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(2) div p:nth-child(1), .popup_container > a, .changeResults p, .changeResults a {
     font-family: var(--font--secondary);
 }
 
