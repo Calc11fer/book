@@ -795,7 +795,7 @@ footer div img {
 
 .changeResults {
     justify-content: space-between;
-    margin: var(--marginLine) calc(var(--marginLine)+2vw);
+    margin: var(--marginLine) calc(var(--marginLine) + 3vw);
 }
 
 .changeResults > div, .changeResults{
