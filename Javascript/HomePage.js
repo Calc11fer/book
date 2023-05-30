@@ -48,8 +48,10 @@ for (i=0; i<decreaseQty.length; i++) {
         console.log(i);
         itemQty[i].innerHTML--;
     });
-    increaseQty[i].addEventListener("click", increase(i));
-    console.log(i);
+    increaseQty[i].addEventListener("click", () => {
+        console.log(i);
+        itemQty[i].innerHTML++;
+    });
 }
 
 // function decrease(x) {
@@ -57,9 +59,9 @@ for (i=0; i<decreaseQty.length; i++) {
 //     itemQty[x].innerHTML--;
 // }
 
-function increase(x) {
-    itemQty[x].innerHTML++;
-}
+// function increase(x) {
+//     itemQty[x].innerHTML++;
+// }
 
 function addProduct(x) {
     cart_items.innerHTML++;
