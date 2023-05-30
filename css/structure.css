@@ -795,13 +795,17 @@ footer div img {
 
 .changeResults {
     justify-content: space-between;
-    margin: var(--marginLine);
+    margin: var(--marginLine), calc(var(--marginLine)+2vw);
 }
 
 .changeResults > div, .changeResults{
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+.changeResults a, .changeResults p {
+    font-size: calc(var(--_size)*1.1);
 }
 
 .changeResults > div:nth-of-type(2) a:hover, .changeResults > div:nth-of-type(1):hover, .changeResults > div:nth-of-type(3):hover {
@@ -817,9 +821,16 @@ footer div img {
     border-bottom: 1px solid black;
 }
 
+.changeResults > div:nth-of-type(2) a {
+    padding: 0.5vw;
+}
+
 .changeResults > div:nth-of-type(2) a:nth-of-type(1) {
-    padding-bottom: 0.5vw;
     border-bottom: 1px solid black;
+}
+
+.changeResults > div:nth-of-type(2) a:nth-of-type(1):hover {
+    border-bottom: 1px solid var(--clickable);
 }
 
 
