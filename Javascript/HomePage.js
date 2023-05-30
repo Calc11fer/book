@@ -39,6 +39,22 @@ const books_price = document.getElementsByClassName("bookList_price");
 let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
 let subtotalPrice = parseFloat(document.getElementById("subtotalPrice").innerHTML);
+let decreaseQty = document.getElementsByClassName("decreaseQty");
+let increaseQty = document.getElementsByClassName("increaseQty");
+let itemQty = document.getElementsByClassName("itemQty");
+
+for (i=0; i<decreaseQty.length; i++) {
+    decreaseQty[i].addEventListener("click", decrease(i));
+    increaseQty[i].addEventListener("click", increase(i));
+}
+
+function decrease(x) {
+    itemQty[x].innerHTML--;
+}
+
+function increase(x) {
+    itemQty[x].innerHTML++;
+}
 // =================================================================================================================================================
 
 // This variable is used for jumping over the first load on current page, so that we can record the search input
@@ -76,8 +92,8 @@ remove_6.addEventListener("click", removeProduct_6);
 product_7.addEventListener("click", product_7_detect);
 remove_7.addEventListener("click", removeProduct_7);
 
-product_8.addEventListener("click", product_7_detect);
-remove_8.addEventListener("click", removeProduct_7);
+product_8.addEventListener("click", product_8_detect);
+remove_8.addEventListener("click", removeProduct_8);
 
 // detect whether to add the product to the cart or remove it
 function product_8_detect() {
