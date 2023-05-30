@@ -811,8 +811,13 @@
         width: 8vw;
         margin: 3vw
     }
+
     .clickable_text.phoneVersion {
         display: block;
+    }
+
+    .changeResults {
+        display: none;
     }
 }
 

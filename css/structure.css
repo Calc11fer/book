@@ -795,7 +795,7 @@ footer div img {
 
 .changeResults {
     justify-content: space-between;
-    margin: var(--marginLine), calc(var(--marginLine)+2vw);
+    margin: var(--marginLine) calc(var(--marginLine)+2vw);
 }
 
 .changeResults > div, .changeResults{
@@ -804,7 +804,7 @@ footer div img {
     align-items: center;
 }
 
-.changeResults a, .changeResults p {
+.changeResults a, .changeResults p, .changeResults ion-icon {
     font-size: calc(var(--_size)*1.1);
 }
 
