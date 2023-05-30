@@ -27,6 +27,14 @@ const product_7 = document.getElementById("product_7_cart");
 const item_7 = document.getElementById("item_7");
 const remove_7 = document.getElementById("remove_7");
 
+const product_8 = document.getElementById("product_8_cart");
+const item_8 = document.getElementById("item_8");
+const remove_8 = document.getElementById("remove_8");
+
+// const product_9 = document.getElementById("product_9_cart");
+// const item_9 = document.getElementById("item_9");
+// const remove_9 = document.getElementById("remove_9");
+
 const books_price = document.getElementsByClassName("bookList_price");
 let title_itemTotal = document.getElementById("title_itemTotal");
 let subtotalPrice_itemTotal = document.getElementById("subtotalPrice_itemTotal");
@@ -67,6 +75,54 @@ remove_6.addEventListener("click", removeProduct_6);
 
 product_7.addEventListener("click", product_7_detect);
 remove_7.addEventListener("click", removeProduct_7);
+
+product_8.addEventListener("click", product_7_detect);
+remove_8.addEventListener("click", removeProduct_7);
+
+// detect whether to add the product to the cart or remove it
+function product_8_detect() {
+    if (product_8.getAttribute("src") === "/book/icons/cart_bt.png") {
+        addProduct_8();
+    } else {
+        removeProduct_8();
+    }
+
+    // check is there an item in the cart, if not, hide the item number
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
+
+function addProduct_8() {
+    cart_items.innerHTML++;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+
+    // calculating the subtotal price
+    subtotalPrice += parseFloat(books_price[7].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+
+    product_8.src = "/book/icons/cart_bt_clicked.png";
+    item_8.style.display = "flex";
+}
+
+function removeProduct_8() {
+    cart_items.innerHTML--;
+    title_itemTotal.innerHTML = subtotalPrice_itemTotal.innerHTML = cart_items.innerHTML;
+    subtotalPrice -= parseFloat(books_price[7].innerHTML.slice(1));
+    document.getElementById("subtotalPrice").innerHTML = subtotalPrice.toFixed(2);
+    
+    product_8.src = "/book/icons/cart_bt.png";
+    item_8.style.display = "none";
+
+    // double checking whether the cart is empty or not
+    if (cart_items.innerHTML < 1) {
+        cart_items.style.display = "none";
+    } else {
+        cart_items.style.display = "block";
+    }
+}
 
 
 // detect whether to add the product to the cart or remove it
