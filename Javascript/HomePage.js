@@ -44,6 +44,7 @@ let increaseQty = document.getElementsByClassName("increaseQty");
 let itemQty = document.getElementsByClassName("itemQty");
 
 for (i=0; i<decreaseQty.length; i++) {
+    console.log(i);
     decreaseQty[i].addEventListener("click", () => {
         console.log(i);
         itemQty[i].innerHTML--;
