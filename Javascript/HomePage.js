@@ -44,15 +44,18 @@ let increaseQty = document.getElementsByClassName("increaseQty");
 let itemQty = document.getElementsByClassName("itemQty");
 
 for (i=0; i<decreaseQty.length; i++) {
-    decreaseQty[i].addEventListener("click", decrease(i));
+    decreaseQty[i].addEventListener("click", () => {
+        console.log(i);
+        itemQty[i].innerHTML--;
+    });
     increaseQty[i].addEventListener("click", increase(i));
     console.log(i);
 }
 
-function decrease(x) {
-    console.log(x);
-    itemQty[x].innerHTML--;
-}
+// function decrease(x) {
+//     console.log(x);
+//     itemQty[x].innerHTML--;
+// }
 
 function increase(x) {
     itemQty[x].innerHTML++;
